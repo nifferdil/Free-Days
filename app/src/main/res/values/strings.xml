@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">National Free Days</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_free_days">FreeDaysActivity</string>
+</resources>
