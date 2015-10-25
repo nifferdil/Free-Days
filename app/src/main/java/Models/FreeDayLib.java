@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 import java.util.ArrayList;
 
@@ -21,14 +21,12 @@ public class FreeDayLib {
     private void setFreeDays() {
         mFreeDays = new ArrayList<>();
 
-
-
         mFreeDays.add(new FreeDay(
             "National Popcorn Day",
             "January 19",
-            "http://www.popcorn.org/AboutUs/Media/NationalPopcornDay/tabid/115/Default.aspx",
-            "Select movie theaters across the country offer a bag of free popcorn."
-        ));
+            "Select movie theaters across the country offer a bag of free popcorn.",
+            "http://www.popcorn.org/AboutUs/Media/NationalPopcornDay/tabid/115/Default.aspx"
+            ));
 
         mFreeDays.add(new FreeDay(
             "National Pancake Day",
@@ -42,6 +40,55 @@ public class FreeDayLib {
             "April 14",
             "Starting at noon, customers at participating Ben & Jerry's locations are welcomed to choose their flavor of ice cream, on the house.",
             "http://www.benjerry.com/scoop-shops/free-cone-day/"
+        ));
+
+        mFreeDays.add(new FreeDay(
+            "National Pretzel Day",
+            "April 26",
+            "Free pretzels at Philly Pretzel Factory, Pretzelmaker, and Snyder's of Hanover.",
+            ""
+        ));
+
+        mFreeDays.add(new FreeDay(
+            "Free Comic Day",
+            "First Saturday in May",
+            "Participating comic book stores across North America give away free comic books.",
+            "http://www.freecomicbookday.com/Home/1/1/27/992"
+        ));
+
+        mFreeDays.add(new FreeDay(
+            "National Donut Day",
+            "First Friday in June",
+            "Get a free donut at Krispy Kreme, LaMar's Donuts, and Shipley Do-Nuts.",
+            ""
+        ));
+
+        mFreeDays.add(new FreeDay(
+            "National Iced Tea Day",
+            "June 10",
+            "7-Eleven gives away a free Snapple tea and Teavana gives you a free tea with purchase.",
+            ""
+        ));
+
+        mFreeDays.add(new FreeDay(
+            "National Coffee Day",
+            "September 29",
+            "Select retailers offer a free small coffee: Dunkin' Donuts, Krispy Kreme, Lamar's Donuts, and McDonald's. Other retailers who offer BOGO are Eintstein's Bros Bagels, Noah's Bagels, and Peet's Coffee.",
+            ""
+        ));
+
+        mFreeDays.add(new FreeDay(
+            "National Cookie Day",
+            "December 4",
+            "Check out stores like Great American Cookies and Quiznos to get your free cookie!",
+            ""
+        ));
+
+        mFreeDays.add(new FreeDay(
+            "National Brownie Day",
+            "December 8",
+            "Free brownie at participating Nestle Toll House Cafe locations.",
+            ""
         ));
     }
 

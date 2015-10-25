@@ -1,18 +1,15 @@
-package UI;
+package ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.epicodus.nationalfreedays.R;
 
-import Models.FreeDay;
-import Models.FreeDayLib;
+import models.FreeDay;
+import models.FreeDayLib;
 
 public class FreeDaysActivity extends AppCompatActivity {
 

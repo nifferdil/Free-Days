@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 /**
  * Created by niffer on 10/23/15.
@@ -6,8 +6,8 @@ package Models;
 public class FreeDay {
     private String mTitle;
     private String mDate;
-    private String mWebsite;
     private String mDescription;
+    private String mWebsite;
 
     public String getTitle() {
         return mTitle;
@@ -25,14 +25,6 @@ public class FreeDay {
         this.mDate = mDate;
     }
 
-    public String getWebsite() {
-        return mWebsite;
-    }
-
-    public void setWebsite(String mWebsite) {
-        this.mWebsite = mWebsite;
-    }
-
     public String getDescription() {
         return mDescription;
     }
@@ -41,8 +33,18 @@ public class FreeDay {
         this.mDescription = mDescription;
     }
 
+
+    public String getWebsite() {
+        return mWebsite;
+    }
+
+    public void setWebsite(String mWebsite) {
+        this.mWebsite = mWebsite;
+    }
+
     public FreeDay(String title, String date, String website, String description) {
         mTitle = title;
+        mDate = date;
         mDescription = description;
         mWebsite = website;
     }

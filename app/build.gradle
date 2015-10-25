@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.epicodus.nationalfreedays"
-        minSdkVersion 14
+        minSdkVersion 23
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -18,6 +18,10 @@ android {
         }
     }
 }
+
+
+
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
