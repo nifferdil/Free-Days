@@ -12,11 +12,11 @@
         android:layout_height="wrap_content"
         android:text="Next Free Day"
         android:id="@+id/nextButton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="45dp"
         android:background="#ffac1a"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        android:layout_below="@+id/descriptionLabel"
+        android:layout_alignEnd="@+id/descriptionLabel"
+        android:layout_marginTop="74dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -64,5 +64,15 @@
         android:textSize="20sp"
         android:gravity="center"
         android:layout_margin="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Notes"
+        android:id="@+id/addNote"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20sp"
+        android:background="#fff385" />
 
 </RelativeLayout>

@@ -1,7 +1,8 @@
 package ui;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,6 +19,7 @@ public class FreeDaysActivity extends AppCompatActivity {
     private TextView mWebsiteLabel;
     private TextView mDescriptionLabel;
     private Button mNextButton;
+    private Button mAddNote;
 
     private FreeDayLib mFreeDayLib;
     private FreeDay mCurrentFreeDay;
@@ -32,6 +34,7 @@ public class FreeDaysActivity extends AppCompatActivity {
         mWebsiteLabel = (TextView) findViewById(R.id.websiteLabel);
         mDescriptionLabel = (TextView) findViewById(R.id.descriptionLabel);
         mNextButton = (Button) findViewById(R.id.nextButton);
+        mAddNote = (Button) findViewById(R.id.addNote);
         mFreeDayLib = new FreeDayLib();
         mCurrentFreeDay = mFreeDayLib.getFreeDays().get(0);
 
@@ -45,6 +48,14 @@ public class FreeDaysActivity extends AppCompatActivity {
             }
         });
 
+        mAddNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FreeDaysActivity.this, NoteActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void setLayoutConTent() {
@@ -52,6 +63,5 @@ public class FreeDaysActivity extends AppCompatActivity {
         mDateLabel.setText(mCurrentFreeDay.getDate());
         mWebsiteLabel.setText(mCurrentFreeDay.getWebsite());
         mDescriptionLabel.setText(mCurrentFreeDay.getDescription());
-
     }
 }
