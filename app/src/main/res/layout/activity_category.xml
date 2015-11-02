@@ -12,21 +12,21 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/newNoteText"
+        android:id="@+id/newCategoryText"
         android:layout_alignParentTop="true"
         android:hint="Which Free Day to add notes?"
-        android:layout_toLeftOf="@+id/newNoteButton"
+        android:layout_toLeftOf="@+id/newCategoryButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@android:color/white"
-        android:layout_alignBottom="@+id/newNoteButton" />
+        android:layout_alignBottom="@+id/newCategoryButton" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add"
-        android:id="@+id/newNoteButton"
+        android:id="@+id/newCategoryButton"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>

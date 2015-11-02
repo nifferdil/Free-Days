@@ -55,7 +55,6 @@ public class FreeDaysActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 
     private void setLayoutConTent() {

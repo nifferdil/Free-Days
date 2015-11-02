@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
@@ -6,44 +5,27 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="By: so and so"
-        android:id="@+id/nameLabel"
-        android:enabled="true"
-        android:background="#8ec1da"
+        android:text="Placeholder for user notes about free days"
+        android:id="@+id/noteLabel"
+        android:textSize="17sp"
         android:textColor="@android:color/black"
-        android:padding="2dp"
-        android:layout_below="@+id/tweetLabel"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/dateLabel"
-        android:layout_toStartOf="@+id/dateLabel"/>
+        android:layout_margin="12sp" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Wednesday, October 30th at 12:00PM"
         android:id="@+id/dateLabel"
         android:background="#8ec1da"
         android:textColor="@android:color/black"
-        android:padding="2dp"
-        android:layout_alignTop="@+id/nameLabel"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="This is a 140 character tweet used to test the dimensions of my Text View box. Here are 50 extra characters used as a placeholder for tests!"
-        android:id="@+id/tweetLabel"
-        android:textSize="17sp"
-        android:textColor="@android:color/black"
-        android:padding="8dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_marginLeft="12sp"
+        android:layout_marginRight="12sp"
+        android:layout_below="@+id/noteLabel"
+        android:layout_alignStart="@+id/noteLabel" />
 
 </RelativeLayout>

@@ -20,33 +20,30 @@ import models.User;
 
 public class NoteActivity extends ListActivity {
 
+    public static String TAG = MainActivity.class.getSimpleName();
+
     private SharedPreferences mPreferences;
     private Button mNewCategoryButton;
     private User mUser;
     private EditText mNewCategoryText;
     private ArrayList<String> mCategories;
-    //private ArrayAdapter<String> mAdapter;
+    private ArrayList<Note> mNotes;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
 
-        Note newNote = new Note();
-        newNote.save();
-
         mPreferences = getApplicationContext().getSharedPreferences("freedays", Context.MODE_PRIVATE);
 
-        mNewCategoryButton = (Button) findViewById(R.id.newNoteButton);
-        mNewCategoryText = (EditText) findViewById(R.id.newNoteText);
+        mNewCategoryButton = (Button) findViewById(R.id.newCategoryButton);
+        mNewCategoryText = (EditText) findViewById(R.id.newCategoryText);
 
         mCategories = new ArrayList<String>();
         for ( Category category : Category.all() ) {
             mCategories.add(category.getName());
         }
-
-//        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mCategories);
-//        setListAdapter(mAdapter);
 
         mNewCategoryButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +67,6 @@ public class NoteActivity extends ListActivity {
         Category newCategory = new Category(name);
         newCategory.save();
         mCategories.add(name);
-        //mAdapter.notifyDataSetChanged();
         mNewCategoryText.setText("");
     }
 }
