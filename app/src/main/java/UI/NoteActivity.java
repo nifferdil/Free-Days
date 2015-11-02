@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -23,10 +24,11 @@ public class NoteActivity extends ListActivity {
     public static String TAG = MainActivity.class.getSimpleName();
 
     private SharedPreferences mPreferences;
-    private Button mNewCategoryButton;
-    private User mUser;
-    private EditText mNewCategoryText;
     private ArrayList<String> mCategories;
+    private Button mNewCategoryButton;
+    private EditText mNewCategoryText;
+    private ArrayAdapter<String> mAdapter;
+    private User mUser;
     private ArrayList<Note> mNotes;
 
 
@@ -35,15 +37,21 @@ public class NoteActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
 
+        Note newNote = new Note();
+        newNote.save();
+
         mPreferences = getApplicationContext().getSharedPreferences("freedays", Context.MODE_PRIVATE);
 
         mNewCategoryButton = (Button) findViewById(R.id.newCategoryButton);
-        mNewCategoryText = (EditText) findViewById(R.id.newCategoryText);
+        mNewCategoryText = (EditText) findViewById(R.id.newNoteText);
 
         mCategories = new ArrayList<String>();
         for ( Category category : Category.all() ) {
             mCategories.add(category.getName());
         }
+
+        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mCategories);
+        setListAdapter(mAdapter);
 
         mNewCategoryButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +75,7 @@ public class NoteActivity extends ListActivity {
         Category newCategory = new Category(name);
         newCategory.save();
         mCategories.add(name);
+        mAdapter.notifyDataSetChanged();
         mNewCategoryText.setText("");
     }
 }

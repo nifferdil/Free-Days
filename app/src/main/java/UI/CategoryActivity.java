@@ -18,10 +18,10 @@ import models.User;
 public class CategoryActivity extends ListActivity {
 
     private Category mCategory;
-    private Button mNewNoteButton;
-    private User mUser;
-    private EditText mNewNoteText;
     private ArrayList<Note> mNotes;
+    private Button mNewNoteButton;
+    private EditText mNewNoteText;
+    private User mUser;
 //    private ArrayAdapter<String> mAdapter;
     private NoteAdapter mAdapter;
 
@@ -59,6 +59,7 @@ public class CategoryActivity extends ListActivity {
         String content =  mNewNoteText.getText().toString();
         Note newNote = new Note(content, mCategory);
         newNote.save();
+        mNotes.add(newNote);
         mAdapter.notifyDataSetChanged();
     }
 }
