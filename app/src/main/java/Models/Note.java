@@ -61,7 +61,7 @@ public class Note extends Model{
 //    }
 
     public String getFormattedTime() {
-        SimpleDateFormat formatter = new SimpleDateFormat("EEEE, MMMM d 'at' h:mm");
+        SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM d 'at' h:mma");
         formatter.setTimeZone(TimeZone.getTimeZone("America/Los Angeles"));
         return formatter.format(mCreatedAt);
     }

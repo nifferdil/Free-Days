@@ -28,7 +28,8 @@
         android:id="@+id/newCategoryButton"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:background="#ffac1a" />
 
     <ListView
         android:layout_width="wrap_content"

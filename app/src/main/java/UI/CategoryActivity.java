@@ -1,6 +1,7 @@
 package ui;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,7 @@ public class CategoryActivity extends ListActivity {
     private Category mCategory;
     private ArrayList<Note> mNotes;
     private Button mNewNoteButton;
+    private Button mDaysButton;
     private EditText mNewNoteText;
     private User mUser;
 //    private ArrayAdapter<String> mAdapter;
@@ -37,7 +39,7 @@ public class CategoryActivity extends ListActivity {
         mNewNoteText = (EditText) findViewById(R.id.newNoteText);
 
         mNotes = new ArrayList<Note>();
-        for ( Note note : mCategory.notes() ) {
+        for (Note note : mCategory.notes()) {
             mNotes.add(note);
         }
 
@@ -53,13 +55,23 @@ public class CategoryActivity extends ListActivity {
                 addNote();
             }
         });
+
+        mDaysButton = (Button) findViewById(R.id.daysButton);
+        mDaysButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CategoryActivity.this, FreeDaysActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    private void addNote() {
-        String content =  mNewNoteText.getText().toString();
-        Note newNote = new Note(content, mCategory);
-        newNote.save();
-        mNotes.add(newNote);
-        mAdapter.notifyDataSetChanged();
-    }
-}
+            private void addNote() {
+                String content = mNewNoteText.getText().toString();
+                Note newNote = new Note(content, mCategory);
+                newNote.save();
+                mNotes.add(newNote);
+                mAdapter.notifyDataSetChanged();
+                mNewNoteText.setText("");
+            }
+        }

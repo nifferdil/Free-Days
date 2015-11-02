@@ -18,7 +18,8 @@
         android:layout_toLeftOf="@+id/newNoteButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@android:color/white" />
+        android:background="@android:color/white"
+        android:layout_alignBottom="@+id/newNoteButton" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -27,14 +28,14 @@
         android:text="Add"
         android:id="@+id/newNoteButton"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+        android:background="#ffac1a"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="4sp" />
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@android:id/list"
-        android:layout_below="@+id/newNoteButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
@@ -45,4 +46,15 @@
         android:id="@android:id/empty"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back to Free Days"
+        android:id="@+id/daysButton"
+        android:textSize="20sp"
+        android:background="#ffac1a"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15sp" />
 </RelativeLayout>
