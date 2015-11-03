@@ -26,6 +26,7 @@
         android:layout_marginLeft="12sp"
         android:layout_marginRight="12sp"
         android:layout_below="@+id/noteLabel"
-        android:layout_alignStart="@+id/noteLabel" />
+        android:layout_alignStart="@+id/noteLabel"
+        android:layout_margin="12sp" />
 
 </RelativeLayout>

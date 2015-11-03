@@ -1,9 +1,11 @@
 package ui;
 
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -18,13 +20,15 @@ import models.User;
 
 public class CategoryActivity extends ListActivity {
 
+    public static String TAG = MainActivity.class.getSimpleName();
+
     private Category mCategory;
     private ArrayList<Note> mNotes;
     private Button mNewNoteButton;
     private Button mDaysButton;
     private EditText mNewNoteText;
     private User mUser;
-//    private ArrayAdapter<String> mAdapter;
+    //    private ArrayAdapter<String> mAdapter;
     private NoteAdapter mAdapter;
 
     @Override
@@ -66,12 +70,18 @@ public class CategoryActivity extends ListActivity {
         });
     }
 
-            private void addNote() {
-                String content = mNewNoteText.getText().toString();
-                Note newNote = new Note(content, mCategory);
-                newNote.save();
-                mNotes.add(newNote);
-                mAdapter.notifyDataSetChanged();
-                mNewNoteText.setText("");
-            }
-        }
+    private void addNote() {
+        String content = mNewNoteText.getText().toString();
+        Note newNote = new Note(content, mCategory);
+        newNote.save();
+        mNotes.add(newNote);
+        mAdapter.notifyDataSetChanged();
+        mNewNoteText.setText("");
+        InputMethodManager inputManager = (InputMethodManager)
+                getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                InputMethodManager.HIDE_NOT_ALWAYS);
+
+    }
+}

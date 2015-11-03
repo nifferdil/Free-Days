@@ -16,8 +16,8 @@ public class FreeDaysActivity extends AppCompatActivity {
 
     private TextView mNameLabel;
     private TextView mDateLabel;
-    private TextView mWebsiteLabel;
     private TextView mDescriptionLabel;
+    private TextView mWebsiteLabel;
     private Button mNextButton;
     private Button mAddNote;
 
@@ -32,6 +32,9 @@ public class FreeDaysActivity extends AppCompatActivity {
         mNameLabel = (TextView) findViewById(R.id.nameLabel);
         mDateLabel = (TextView) findViewById(R.id.dateLabel);
         mWebsiteLabel = (TextView) findViewById(R.id.websiteLabel);
+//        if (mWebsiteLabel != null) {
+//            mWebsiteLabel.setMovementMethod(LinkMovementMethod.getInstance());
+//        }
         mDescriptionLabel = (TextView) findViewById(R.id.descriptionLabel);
         mNextButton = (Button) findViewById(R.id.nextButton);
         mAddNote = (Button) findViewById(R.id.addNote);
@@ -55,6 +58,14 @@ public class FreeDaysActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+//        mWebsiteLabel.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(mCurrentFreeDay.getWebsite()));
+//                startActivity(intent);
+//            }
+//        });
     }
 
     private void setLayoutConTent() {

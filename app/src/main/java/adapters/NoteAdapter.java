@@ -21,8 +21,8 @@ public class NoteAdapter extends BaseAdapter {
     private ArrayList<Note> mNotes;
 
     public NoteAdapter(Context context, ArrayList<Note> notes) {
-        mContext = context;
         mNotes = notes;
+        mContext = context;
     }
 
     @Override
