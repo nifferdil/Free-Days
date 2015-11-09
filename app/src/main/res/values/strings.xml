@@ -7,4 +7,7 @@
     <string name="title_activity_note">Notes</string>
     <string name="title_activity_register">Register</string>
     <string name="title_activity_category">CategoryActivity</string>
+    <string name="title_activity_new_free_day">NewFreeDayActivity</string>
+    <string name="title_activity_new_free_day_display">NewFreeDayDisplayActivity</string>
+    <string name="title_activity_added_free_day_display">AddedFreeDayDisplayActivity</string>
 </resources>

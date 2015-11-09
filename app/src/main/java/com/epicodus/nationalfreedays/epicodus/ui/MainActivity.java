@@ -19,6 +19,7 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
 
     @Bind(R.id.daysButton)Button mDaysButton;
+    @Bind(R.id.addFreeDayButton)Button mAddFreeDayButton;
     private SharedPreferences mPreferences;
     private User mUser;
 
@@ -44,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, FreeDaysActivity.class);
                     startActivity(intent);
+            }
+        });
+
+        mAddFreeDayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NewFreeDayActivity.class);
+                startActivity(intent);
             }
         });
     }
