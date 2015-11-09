@@ -53,7 +53,7 @@ public class FreeDayLib {
         mFreeDays.add(new FreeDay(
             "Free Comic Day",
             "First Saturday in May",
-            "http://www.freecomicbookday.com/Home/1/1/27/99/",
+            "http://www.freecomicbookday.com/",
             "Participating comic book stores across North America give away free comic books."
         ));
 

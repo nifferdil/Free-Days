@@ -57,7 +57,7 @@ public class NoteAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.note_list_item, null);
             holder = new ViewHolder();
-            holder.dateLabel = (TextView) convertView.findViewById(R.id.dateLabel);
+            holder.dateLabel = (TextView) convertView.findViewById(R.id.newFreeDayDateLabel);
             holder.noteLabel = (TextView) convertView.findViewById(R.id.noteLabel);
             holder.noteDelete = (TextView) convertView.findViewById(R.id.noteDelete);
 

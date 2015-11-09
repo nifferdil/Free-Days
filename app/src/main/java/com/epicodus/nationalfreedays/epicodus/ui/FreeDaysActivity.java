@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
 public class FreeDaysActivity extends AppCompatActivity {
 
     @Bind(R.id.nameLabel)TextView mNameLabel;
-    @Bind(R.id.dateLabel)TextView mDateLabel;
+    @Bind(R.id.newFreeDayDateLabel)TextView mDateLabel;
     @Bind(R.id.descriptionLabel)TextView mDescriptionLabel;
     @Bind(R.id.websiteLabel)TextView mWebsiteLabel;
     @Bind(R.id.nextButton)Button mNextButton;

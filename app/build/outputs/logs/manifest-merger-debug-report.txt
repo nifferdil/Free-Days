@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:2:1-73:12
+ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:2:1-97:12
 	package
 		ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:3:5-44
 		INJECTED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml
@@ -22,7 +22,7 @@ ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/An
 	android:name
 		ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:6:22-76
 application
-ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:8:5-71:19
+ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:8:5-95:19
 MERGED from [com.android.support:appcompat-v7:23.1.0] /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.0] /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
 	android:label
@@ -109,6 +109,30 @@ ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/An
 		ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:66:13-67
 	android:name
 		ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:64:13-57
+activity#com.epicodus.nationalfreedays.epicodus.ui.NewFreeDayActivity
+ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:71:9-78:20
+	android:label
+		ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:73:13-64
+	android:parentActivityName
+		ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:74:13-67
+	android:name
+		ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:72:13-59
+activity#com.epicodus.nationalfreedays.epicodus.NewFreeDayDisplayActivity
+ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:79:9-86:20
+	android:label
+		ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:81:13-72
+	android:parentActivityName
+		ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:82:13-67
+	android:name
+		ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:80:13-63
+activity#com.epicodus.nationalfreedays.epicodus.ui.AddedFreeDayDisplayActivity
+ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:87:9-94:20
+	android:label
+		ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:89:13-74
+	android:parentActivityName
+		ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:90:13-67
+	android:name
+		ADDED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml:88:13-68
 uses-sdk
 INJECTED from /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.1.0] /Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/AndroidManifest.xml:20:5-43

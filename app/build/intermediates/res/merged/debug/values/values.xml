@@ -225,8 +225,11 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <!-- From: file:/Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="title_activity_added_free_day_display">AddedFreeDayDisplayActivity</string>
     <string name="title_activity_category">CategoryActivity</string>
     <string name="title_activity_free_days">FreeDaysActivity</string>
+    <string name="title_activity_new_free_day">NewFreeDayActivity</string>
+    <string name="title_activity_new_free_day_display">NewFreeDayDisplayActivity</string>
     <string name="title_activity_note">Notes</string>
     <string name="title_activity_register">Register</string>
     <!-- From: file:/Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->

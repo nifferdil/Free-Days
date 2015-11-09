@@ -18,10 +18,10 @@ import java.util.List;
  */
 public class AddedFreeDay {
 
+    ParseObject parseObject;
     String mNewFreeDayTitleText;
     String mNewFreeDayDate;
     String mNewFreeDayDescription;
-    ParseObject parseObject;
 
     public void AddedFreeDay() {
         ParseObject parseObject = new ParseObject("AddedFreeDay");
@@ -39,6 +39,7 @@ public class AddedFreeDay {
 
     public void setNewFreeDayTitleText(String newFreeDayTitleText) {
         mNewFreeDayTitleText = newFreeDayTitleText;
+        parseObject.put("newFreeDayTitleText", newFreeDayTitleText);
     }
 
     public String getNewFreeDayDate() {
@@ -47,6 +48,7 @@ public class AddedFreeDay {
 
     public void setNewFreeDayDate(String newFreeDayDate) {
         mNewFreeDayDate = newFreeDayDate;
+        parseObject.put("newFreeDayDate", newFreeDayDate);
     }
 
     public String getNewFreeDayDescription() {
@@ -55,24 +57,29 @@ public class AddedFreeDay {
 
     public void setmNewFreeDayDescription(String newFreeDayDescription) {
         mNewFreeDayDescription = newFreeDayDescription;
+        parseObject.put("newFreeDayDescription", newFreeDayDescription);
+
     }
 
+    public void save() {
+        parseObject.saveInBackground();
+    }
 
 
     public static ArrayList<AddedFreeDay> all(final Activity context, final Runnable runnable) {
         final ArrayList<AddedFreeDay> addedFreeDays = new ArrayList<>();
 
 
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("MessagePost");
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("AddedFreeDay");
         query.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> objects, ParseException e) {
                 if (e == null) {
                     for(int i = 0; i < objects.size(); i++){
                         ParseObject pMessage = objects.get(i);
-                        ParseObject pUser = pMessage.getParseObject("userName");
 
-                        AddedFreeDay addedFreeDay = new AddedFreeDay(pAddedFreeDay.getString("newF"),
-                                pUser.getString("username"));
+                        AddedFreeDay addedFreeDay = new AddedFreeDay(pAddedFreeDay.getString("mNewFreeDayTitleText"),
+                        AddedFreeDay addedFreeDay = new AddedFreeDay(pAddedFreeDay.getString("mNewFreeDayDate"),
+                        AddedFreeDay addedFreeDay = new AddedFreeDay(pAddedFreeDay.getString("mNewFreeDayDescription"),
                         addedFreeDays.add(addedFreeDay);
 
                         context.runOnUiThread(runnable);
