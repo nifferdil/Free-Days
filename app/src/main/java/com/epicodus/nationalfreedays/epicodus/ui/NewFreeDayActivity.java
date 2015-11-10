@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 
 import com.epicodus.nationalfreedays.R;
 import com.epicodus.nationalfreedays.epicodus.models.AddedFreeDay;
@@ -17,9 +17,9 @@ import butterknife.ButterKnife;
 
 public class NewFreeDayActivity extends AppCompatActivity {
 
-    @Bind(R.id.newFreeDayTitleText)TextView mNewFreeDayTitleText;
-    @Bind(R.id.newFreeDayDate)TextView mNewFreeDayDate;
-    @Bind(R.id.newFreeDayDescription)TextView mNewFreeDayDescription;
+    @Bind(R.id.newFreeDayTitleText)EditText mNewFreeDayTitleText;
+    @Bind(R.id.newFreeDayDate)EditText mNewFreeDayDate;
+    @Bind(R.id.newFreeDayDescription)EditText mNewFreeDayDescription;
     @Bind(R.id.addedFreeDayButton)Button mAddedFreeDayButton;
     private ArrayList<AddedFreeDay> mAddedFreeDays;
 
@@ -32,14 +32,29 @@ public class NewFreeDayActivity extends AppCompatActivity {
         mAddedFreeDayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String newFreeDayTitleText = mNewFreeDayTitleText.getText().toString();
-                String newFreeDayDate = mNewFreeDayDate.getText().toString();
-                String newFreeDayDescription = mNewFreeDayDescription.getText().toString();
-                AddedFreeDay addedFreeDay = new AddedFreeDay(newFreeDayTitleText, newFreeDayDate, newFreeDayDescription);
-                mAddedFreeDays.add(addedFreeDay);
+                addFreeDay();
+
                 Intent intent = new Intent(NewFreeDayActivity.this, AddedFreeDayDisplayActivity.class);
                 startActivity(intent);
             }
         });
+    }
+
+    private void addFreeDay() {
+        String newFreeDayTitleText = mNewFreeDayTitleText.getText().toString();
+        String newFreeDayDate = mNewFreeDayDate.getText().toString();
+        String newFreeDayDescription = mNewFreeDayDescription.getText().toString();
+
+        AddedFreeDay addedFreeDay = new AddedFreeDay(newFreeDayTitleText, newFreeDayDate, newFreeDayDescription);
+        addedFreeDay.setNewFreeDayTitleText(newFreeDayTitleText);
+        addedFreeDay.setNewFreeDayDate(newFreeDayDate);
+        addedFreeDay.setNewFreeDayDescription(newFreeDayDescription);
+
+        addedFreeDay.save();
+        mAddedFreeDays = new ArrayList<AddedFreeDay>();
+        mAddedFreeDays.add(addedFreeDay);
+        mNewFreeDayTitleText.setText("");
+        mNewFreeDayDate.setText("");
+        mNewFreeDayDescription.setText("");
     }
 }

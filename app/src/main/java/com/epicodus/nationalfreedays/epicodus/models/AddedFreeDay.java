@@ -20,14 +20,11 @@ public class AddedFreeDay {
     String mNewFreeDayDate;
     String mNewFreeDayDescription;
 
-    public AddedFreeDay() {
-        ParseObject parseObject = new ParseObject("AddedFreeDay");
-    }
-
     public AddedFreeDay(String newFreeDayTitleText, String newFreeDayDate, String newFreeDayDescription) {
         mNewFreeDayTitleText = newFreeDayTitleText;
         mNewFreeDayDate = newFreeDayDate;
         mNewFreeDayDescription = newFreeDayDescription;
+        parseObject = new ParseObject("AddedFreeDay");
     }
 
     public String getNewFreeDayTitleText() {
@@ -52,7 +49,7 @@ public class AddedFreeDay {
         return mNewFreeDayDescription;
     }
 
-    public void setmNewFreeDayDescription(String newFreeDayDescription) {
+    public void setNewFreeDayDescription(String newFreeDayDescription) {
         mNewFreeDayDescription = newFreeDayDescription;
         parseObject.put("newFreeDayDescription", newFreeDayDescription);
 

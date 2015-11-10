@@ -12,7 +12,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="41dp"
-        android:layout_margin="10sp" />
+        android:layout_margin="10sp"
+        android:textColor="#404040" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,7 +23,8 @@
         android:layout_below="@+id/newFreeDayTitleLabel"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
-        android:layout_margin="10sp" />
+        android:layout_margin="10sp"
+        android:textColor="#404040" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,5 +33,6 @@
         android:id="@+id/newFreeDayDescriptionLabel"
         android:layout_alignLeft="@+id/newFreeDayDateLabel"
         android:layout_alignStart="@+id/newFreeDayDateLabel"
-        android:layout_below="@+id/newFreeDayDateLabel" />
+        android:layout_below="@+id/newFreeDayDateLabel"
+        android:textColor="#404040" />
 </RelativeLayout>
