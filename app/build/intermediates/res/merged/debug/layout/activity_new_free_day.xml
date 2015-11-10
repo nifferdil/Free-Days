@@ -60,12 +60,23 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Free Day"
-        android:id="@+id/addedFreeDayButton"
+        android:text="Add New Free Day"
+        android:id="@+id/addNewFreeDayButton"
         android:background="#ffac1a"
         android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignLeft="@+id/newFreeDayDescription"
+        android:layout_alignStart="@+id/newFreeDayDescription" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Added Free Days"
+        android:id="@+id/viewAddedFreeDayButton"
+        android:background="#ffac1a"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/addNewFreeDayButton"
+        android:layout_alignEnd="@+id/addNewFreeDayButton"
+        android:layout_marginBottom="43dp" />
 
 </RelativeLayout>
 <!-- From: file:/Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/res/layout/activity_new_free_day.xml -->

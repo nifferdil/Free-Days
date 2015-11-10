@@ -20,7 +20,8 @@ public class NewFreeDayActivity extends AppCompatActivity {
     @Bind(R.id.newFreeDayTitleText)EditText mNewFreeDayTitleText;
     @Bind(R.id.newFreeDayDate)EditText mNewFreeDayDate;
     @Bind(R.id.newFreeDayDescription)EditText mNewFreeDayDescription;
-    @Bind(R.id.addedFreeDayButton)Button mAddedFreeDayButton;
+    @Bind(R.id.addNewFreeDayButton)Button mAddNewFreeDayButton;
+    @Bind(R.id.viewAddedFreeDayButton)Button mViewAddedFreeDayButton;
     private ArrayList<AddedFreeDay> mAddedFreeDays;
 
     @Override
@@ -29,11 +30,19 @@ public class NewFreeDayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_free_day);
         ButterKnife.bind(this);
 
-        mAddedFreeDayButton.setOnClickListener(new View.OnClickListener() {
+        mAddNewFreeDayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 addFreeDay();
 
+                Intent intent = new Intent(NewFreeDayActivity.this, AddedFreeDayDisplayActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mViewAddedFreeDayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(NewFreeDayActivity.this, AddedFreeDayDisplayActivity.class);
                 startActivity(intent);
             }

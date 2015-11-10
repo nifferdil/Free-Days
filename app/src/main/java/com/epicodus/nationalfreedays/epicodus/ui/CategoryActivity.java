@@ -75,6 +75,5 @@ public class CategoryActivity extends ListActivity {
 
         inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
                 InputMethodManager.HIDE_NOT_ALWAYS);
-
     }
 }

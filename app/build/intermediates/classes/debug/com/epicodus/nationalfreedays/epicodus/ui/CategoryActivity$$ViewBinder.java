@@ -8,12 +8,12 @@ import butterknife.ButterKnife.ViewBinder;
 public class CategoryActivity$$ViewBinder<T extends com.epicodus.nationalfreedays.epicodus.ui.CategoryActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131492946, "field 'mNewNoteButton'");
-    target.mNewNoteButton = finder.castView(view, 2131492946, "field 'mNewNoteButton'");
-    view = finder.findRequiredView(source, 2131492947, "field 'mDaysButton'");
-    target.mDaysButton = finder.castView(view, 2131492947, "field 'mDaysButton'");
-    view = finder.findRequiredView(source, 2131492945, "field 'mNewNoteText'");
-    target.mNewNoteText = finder.castView(view, 2131492945, "field 'mNewNoteText'");
+    view = finder.findRequiredView(source, 2131492947, "field 'mNewNoteButton'");
+    target.mNewNoteButton = finder.castView(view, 2131492947, "field 'mNewNoteButton'");
+    view = finder.findRequiredView(source, 2131492945, "field 'mDaysButton'");
+    target.mDaysButton = finder.castView(view, 2131492945, "field 'mDaysButton'");
+    view = finder.findRequiredView(source, 2131492946, "field 'mNewNoteText'");
+    target.mNewNoteText = finder.castView(view, 2131492946, "field 'mNewNoteText'");
   }
 
   @Override public void unbind(T target) {

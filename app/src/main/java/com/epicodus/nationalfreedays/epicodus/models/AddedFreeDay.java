@@ -52,13 +52,11 @@ public class AddedFreeDay {
     public void setNewFreeDayDescription(String newFreeDayDescription) {
         mNewFreeDayDescription = newFreeDayDescription;
         parseObject.put("newFreeDayDescription", newFreeDayDescription);
-
     }
 
     public void save() {
         parseObject.saveInBackground();
     }
-
 
     public static ArrayList<AddedFreeDay> all(final Activity context, final Runnable runnable) {
         final ArrayList<AddedFreeDay> addedFreeDays = new ArrayList<>();
