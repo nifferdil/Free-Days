@@ -83,14 +83,6 @@
                 android:value="com.epicodus.nationalfreedays.epicodus.ui.MainActivity" />
         </activity>
         <activity
-            android:name="com.epicodus.nationalfreedays.epicodus.NewFreeDayDisplayActivity"
-            android:label="@string/title_activity_new_free_day_display"
-            android:parentActivityName="com.epicodus.nationalfreedays.epicodus.ui.MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.epicodus.nationalfreedays.epicodus.ui.MainActivity" />
-        </activity>
-        <activity
             android:name="com.epicodus.nationalfreedays.epicodus.ui.AddedFreeDayDisplayActivity"
             android:label="@string/title_activity_added_free_day_display"
             android:parentActivityName="com.epicodus.nationalfreedays.epicodus.ui.MainActivity" >
