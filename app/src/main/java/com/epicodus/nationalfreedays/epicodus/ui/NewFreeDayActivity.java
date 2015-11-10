@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.epicodus.nationalfreedays.R;
 import com.epicodus.nationalfreedays.epicodus.models.AddedFreeDay;
 
+import java.util.ArrayList;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -19,6 +21,7 @@ public class NewFreeDayActivity extends AppCompatActivity {
     @Bind(R.id.newFreeDayDate)TextView mNewFreeDayDate;
     @Bind(R.id.newFreeDayDescription)TextView mNewFreeDayDescription;
     @Bind(R.id.addedFreeDayButton)Button mAddedFreeDayButton;
+    private ArrayList<AddedFreeDay> mAddedFreeDays;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +35,8 @@ public class NewFreeDayActivity extends AppCompatActivity {
                 String newFreeDayTitleText = mNewFreeDayTitleText.getText().toString();
                 String newFreeDayDate = mNewFreeDayDate.getText().toString();
                 String newFreeDayDescription = mNewFreeDayDescription.getText().toString();
-                AddedFreeDay(newFreeDayTitleText, newFreeDayDate, newFreeDayDescription);
+                AddedFreeDay addedFreeDay = new AddedFreeDay(newFreeDayTitleText, newFreeDayDate, newFreeDayDescription);
+                mAddedFreeDays.add(addedFreeDay);
                 Intent intent = new Intent(NewFreeDayActivity.this, AddedFreeDayDisplayActivity.class);
                 startActivity(intent);
             }
