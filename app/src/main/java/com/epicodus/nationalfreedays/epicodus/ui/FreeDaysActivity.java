@@ -13,6 +13,8 @@ import com.epicodus.nationalfreedays.R;
 import com.epicodus.nationalfreedays.epicodus.models.FreeDay;
 import com.epicodus.nationalfreedays.epicodus.models.FreeDayLib;
 
+import java.util.Calendar;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -24,6 +26,7 @@ public class FreeDaysActivity extends AppCompatActivity {
     @Bind(R.id.websiteLabel)TextView mWebsiteLabel;
     @Bind(R.id.nextButton)Button mNextButton;
     @Bind(R.id.addNote)Button mAddNote;
+    @Bind(R.id.calendarButton)Button mCalendarButton;
 
     private FreeDayLib mFreeDayLib;
     private FreeDay mCurrentFreeDay;
@@ -63,6 +66,21 @@ public class FreeDaysActivity extends AppCompatActivity {
                 }
             });
             }
+
+        mCalendarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Calendar cal = Calendar.getInstance();
+                    Intent intent = new Intent(Intent.ACTION_EDIT);
+                    intent.setType("vnd.android.cursor.item/event");
+                    intent.putExtra("beginTime", cal.getTimeInMillis());
+                    intent.putExtra("allDay", true);
+                    intent.putExtra("rrule", "FREQ=YEARLY");
+                    intent.putExtra("endTime", cal.getTimeInMillis()+60*60*1000);
+                    intent.putExtra("title", "A Test Event from android app");
+                    startActivity(intent);
+            }
+        });
         }
 
     private void setLayoutConTent() {

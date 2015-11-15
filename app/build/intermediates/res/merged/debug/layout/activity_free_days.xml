@@ -77,5 +77,16 @@
         android:background="#fff385"
         android:layout_margin="10sp" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save the Date"
+        android:id="@+id/calendarButton"
+        android:layout_above="@+id/nextButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="41dp"
+        android:background="#ffac1a"
+        android:textSize="22sp" />
+
 </RelativeLayout>
 <!-- From: file:/Users/niffer/AndroidStudioProjects/NationalFreeDays2/app/src/main/res/layout/activity_free_days.xml -->

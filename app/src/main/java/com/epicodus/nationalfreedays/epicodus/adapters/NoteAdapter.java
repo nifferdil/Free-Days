@@ -11,11 +11,11 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.epicodus.nationalfreedays.R;
-
-import java.util.ArrayList;
-
+import com.epicodus.nationalfreedays.epicodus.models.Category;
 import com.epicodus.nationalfreedays.epicodus.models.Note;
 import com.epicodus.nationalfreedays.epicodus.ui.CategoryActivity;
+
+import java.util.ArrayList;
 
 /**
  * Created by niffer on 11/1/15.
@@ -23,6 +23,7 @@ import com.epicodus.nationalfreedays.epicodus.ui.CategoryActivity;
 public class NoteAdapter extends BaseAdapter {
     private Context mContext;
     private ArrayList<Note> mNotes;
+    private Category mCategory;
 
     public NoteAdapter(Context context, ArrayList<Note> notes) {
         mNotes = notes;

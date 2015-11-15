@@ -20,6 +20,8 @@ public class FreeDaysActivity$$ViewBinder<T extends com.epicodus.nationalfreeday
     target.mNextButton = finder.castView(view, 2131492948, "field 'mNextButton'");
     view = finder.findRequiredView(source, 2131492949, "field 'mAddNote'");
     target.mAddNote = finder.castView(view, 2131492949, "field 'mAddNote'");
+    view = finder.findRequiredView(source, 2131492954, "field 'mCalendarButton'");
+    target.mCalendarButton = finder.castView(view, 2131492954, "field 'mCalendarButton'");
   }
 
   @Override public void unbind(T target) {
@@ -29,5 +31,6 @@ public class FreeDaysActivity$$ViewBinder<T extends com.epicodus.nationalfreeday
     target.mWebsiteLabel = null;
     target.mNextButton = null;
     target.mAddNote = null;
+    target.mCalendarButton = null;
   }
 }

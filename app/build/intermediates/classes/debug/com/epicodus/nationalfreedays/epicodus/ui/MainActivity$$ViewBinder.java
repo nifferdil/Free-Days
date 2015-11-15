@@ -10,8 +10,8 @@ public class MainActivity$$ViewBinder<T extends com.epicodus.nationalfreedays.ep
     View view;
     view = finder.findRequiredView(source, 2131492945, "field 'mDaysButton'");
     target.mDaysButton = finder.castView(view, 2131492945, "field 'mDaysButton'");
-    view = finder.findRequiredView(source, 2131492957, "field 'mAddFreeDayButton'");
-    target.mAddFreeDayButton = finder.castView(view, 2131492957, "field 'mAddFreeDayButton'");
+    view = finder.findRequiredView(source, 2131492958, "field 'mAddFreeDayButton'");
+    target.mAddFreeDayButton = finder.castView(view, 2131492958, "field 'mAddFreeDayButton'");
   }
 
   @Override public void unbind(T target) {

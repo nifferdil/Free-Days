@@ -14,7 +14,7 @@ public class App extends Application {
         super.onCreate();
 
         Parse.enableLocalDatastore(this);
-//
+
         Parse.initialize(this, "7EuPvWtQ5mrGUi0khIKtbNOaw3jQtvG77NAZi0tQ", "hMyRAjjH6sBGRoFMSSt39OulRMgXqmY5M4wNMK4s");
     }
 }
