@@ -4,6 +4,16 @@ package com.epicodus.nationalfreedays.epicodus.models;
  * Created by niffer on 10/23/15.
  */
 public class FreeDay {
+    private int Image;
+
+    public int getImage() {
+        return Image;
+    }
+
+    public void setImage(int image) {
+        Image = image;
+    }
+
     private String mTitle;
     private String mDate;
     private String mDescription;
