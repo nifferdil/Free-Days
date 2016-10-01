@@ -1,5 +1,7 @@
 package com.epicodus.nationalfreedays.epicodus.models;
 
+import com.epicodus.nationalfreedays.R;
+
 import java.util.ArrayList;
 
 /**
@@ -22,7 +24,7 @@ public class FreeDayLib {
         mFreeDays = new ArrayList<>();
 
         mFreeDays.add(new FreeDay(
-
+            R.drawable.ic_popcorn,
             "National Popcorn Day",
             "January 19",
             "http://www.popcorn.org/AboutUs/Media/NationalPopcornDay/tabid/115/Default.aspx/",
@@ -30,6 +32,7 @@ public class FreeDayLib {
             ));
 
         mFreeDays.add(new FreeDay(
+                R.drawable.ic_coffee_maker,
             "National Pancake Day",
             "March 8",
             "http://www.ihoppancakeday.com/index.html/",
@@ -37,6 +40,7 @@ public class FreeDayLib {
         ));
 
         mFreeDays.add(new FreeDay(
+                R.drawable.ic_coffee_maker,
             "Free Cone Day",
             "April 14",
             "http://www.benjerry.com/scoop-shops/free-cone-day/",
@@ -45,6 +49,7 @@ public class FreeDayLib {
         ));
 
         mFreeDays.add(new FreeDay(
+                R.drawable.ic_coffee_maker,
             "National Pretzel Day",
             "April 26",
             "",
@@ -52,6 +57,7 @@ public class FreeDayLib {
         ));
 
         mFreeDays.add(new FreeDay(
+                R.drawable.ic_coffee_maker,
             "Free Comic Day",
             "First Saturday in May",
             "http://www.freecomicbookday.com/",
@@ -59,6 +65,7 @@ public class FreeDayLib {
         ));
 
         mFreeDays.add(new FreeDay(
+                R.drawable.ic_coffee_maker,
             "National Donut Day",
             "First Friday in June",
             "",
@@ -66,6 +73,7 @@ public class FreeDayLib {
         ));
 
         mFreeDays.add(new FreeDay(
+                R.drawable.ic_coffee_maker,
             "National Iced Tea Day",
             "June 10",
             "",
@@ -73,6 +81,7 @@ public class FreeDayLib {
         ));
 
         mFreeDays.add(new FreeDay(
+                R.drawable.ic_coffee_maker,
             "National Coffee Day",
             "September 29",
             "",
@@ -80,6 +89,8 @@ public class FreeDayLib {
         ));
 
         mFreeDays.add(new FreeDay(
+                R.drawable.ic_coffee_maker,
+
                 "National Sandwich Day",
                 "November 3",
                 "",
@@ -87,14 +98,18 @@ public class FreeDayLib {
         ));
 
         mFreeDays.add(new FreeDay(
-            "National Cookie Day",
+                R.drawable.ic_coffee_maker,
+
+                "National Cookie Day",
             "December 4",
             "",
             "Check out stores like Great American Cookies and Quiznos to get your free cookie!"
         ));
 
         mFreeDays.add(new FreeDay(
-            "National Brownie Day",
+                R.drawable.ic_coffee_maker,
+
+                "National Brownie Day",
             "December 8",
             "",
             "Free brownie at participating Nestle Toll House Cafe locations."

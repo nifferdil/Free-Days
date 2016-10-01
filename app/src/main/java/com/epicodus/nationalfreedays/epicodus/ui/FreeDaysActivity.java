@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.epicodus.nationalfreedays.R;
@@ -20,6 +21,7 @@ import butterknife.ButterKnife;
 
 public class FreeDaysActivity extends AppCompatActivity {
 
+    @Bind(R.id.imageLabel)ImageView imageLabel;
     @Bind(R.id.nameLabel)TextView mNameLabel;
     @Bind(R.id.newFreeDayDateLabel)TextView mDateLabel;
     @Bind(R.id.descriptionLabel)TextView mDescriptionLabel;
@@ -84,6 +86,7 @@ public class FreeDaysActivity extends AppCompatActivity {
         }
 
     private void setLayoutConTent() {
+        imageLabel.setImageResource(mCurrentFreeDay.getImage());
         mNameLabel.setText(mCurrentFreeDay.getTitle());
         mDateLabel.setText(mCurrentFreeDay.getDate());
         if (mCurrentFreeDay.getWebsite() == "") {

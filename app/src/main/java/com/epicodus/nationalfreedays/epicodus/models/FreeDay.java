@@ -5,6 +5,10 @@ package com.epicodus.nationalfreedays.epicodus.models;
  */
 public class FreeDay {
     private int Image;
+    private String mTitle;
+    private String mDate;
+    private String mDescription;
+    private String mWebsite;
 
     public int getImage() {
         return Image;
@@ -13,11 +17,6 @@ public class FreeDay {
     public void setImage(int image) {
         Image = image;
     }
-
-    private String mTitle;
-    private String mDate;
-    private String mDescription;
-    private String mWebsite;
 
     public String getTitle() {
         return mTitle;
@@ -52,7 +51,9 @@ public class FreeDay {
         this.mWebsite = mWebsite;
     }
 
-    public FreeDay(String title, String date, String website, String description) {
+    public FreeDay(int image, String title, String date, String description, String website) {
+
+        Image = image;
         mTitle = title;
         mDate = date;
         mDescription = description;
