@@ -1,1 +1,0 @@
-ALTER TABLE Notes ADD COLUMN Category int;
