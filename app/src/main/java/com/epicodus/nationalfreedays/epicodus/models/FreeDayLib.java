@@ -36,7 +36,7 @@ public class FreeDayLib {
                 "National Pancake Day",
                 "March 8",
                 "IHOP offers a free short stack of buttermilk pancakes, limited to dine,-in guests visiting between 7am and 10pm, while supplies last.",
-                "http://www.ihoppancakeday.com/index.html/"
+                "http://www.ihoppancakeday.com/"
         ));
 
         mFreeDays.add(new FreeDay(

@@ -1,86 +1,102 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="16dp"
-    tools:context="com.epicodus.nationalfreedays.epicodus.ui.FreeDaysActivity"
-    android:gravity="center"
-    android:orientation="vertical">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="20dp"
+              android:gravity="center"
+              android:orientation="vertical"
+              tools:context="com.epicodus.nationalfreedays.epicodus.ui.FreeDaysActivity">
 
-    <ImageView
-        android:id="@+id/imageLabel"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:src="@drawable/ic_coffee_maker"
-        android:layout_gravity="center"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Free Day Name"
-        android:id="@+id/nameLabel"
-        android:textIsSelectable="false"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginTop="10dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date"
-        android:id="@+id/newFreeDayDateLabel"
-        android:textSize="28sp"
-        android:gravity="center"
-        android:layout_marginTop="5dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Description"
-        android:id="@+id/descriptionLabel"
-        android:layout_centerHorizontal="true"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_margin="10sp" />
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Website"
-        android:id="@+id/websiteLabel"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_margin="10sp" />
+        >
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Next Free Day"
-        android:id="@+id/nextButton"
-        android:background="#ffac1a"
-        android:textSize="22sp"
-       android:layout_marginTop="40dp"
-        android:layout_marginBottom="30dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Notes"
-        android:id="@+id/addNote"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20sp"
-        android:background="#fff385"
-        android:layout_margin="10sp" />
+            <ImageView
+                android:id="@+id/imageLabel"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_coffee_maker"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save the Date"
-        android:id="@+id/calendarButton"
-        android:layout_above="@+id/nextButton"
-        android:layout_marginBottom="41dp"
-        android:background="#ffac1a"
-        android:textSize="22sp" />
+            <TextView
+                android:id="@+id/nameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Free Day Name"
+                android:textIsSelectable="false"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/newFreeDayDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="Date"
+                android:textSize="28dp"/>
+
+            <TextView
+                android:id="@+id/descriptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Description"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/websiteLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="Website"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="40dp"
+                android:background="#ffac1a"
+                android:text="Next Free Day"
+                android:textSize="22sp"/>
+
+            <Button
+                android:id="@+id/addNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20sp"
+                android:background="#fff385"
+                android:text="Add Notes"/>
+
+            <Button
+                android:id="@+id/calendarButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/nextButton"
+                android:layout_marginBottom="41dp"
+                android:background="#ffac1a"
+                android:text="Save the Date"
+                android:textSize="22sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

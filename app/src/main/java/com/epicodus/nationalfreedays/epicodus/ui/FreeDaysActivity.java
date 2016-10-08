@@ -21,14 +21,22 @@ import butterknife.ButterKnife;
 
 public class FreeDaysActivity extends AppCompatActivity {
 
-    @Bind(R.id.imageLabel)ImageView imageLabel;
-    @Bind(R.id.nameLabel)TextView mNameLabel;
-    @Bind(R.id.newFreeDayDateLabel)TextView mDateLabel;
-    @Bind(R.id.descriptionLabel)TextView mDescriptionLabel;
-    @Bind(R.id.websiteLabel)TextView mWebsiteLabel;
-    @Bind(R.id.nextButton)Button mNextButton;
-    @Bind(R.id.addNote)Button mAddNote;
-    @Bind(R.id.calendarButton)Button mCalendarButton;
+    @Bind(R.id.imageLabel)
+    ImageView imageLabel;
+    @Bind(R.id.nameLabel)
+    TextView mNameLabel;
+    @Bind(R.id.newFreeDayDateLabel)
+    TextView mDateLabel;
+    @Bind(R.id.descriptionLabel)
+    TextView mDescriptionLabel;
+    @Bind(R.id.websiteLabel)
+    TextView mWebsiteLabel;
+    @Bind(R.id.nextButton)
+    Button mNextButton;
+    @Bind(R.id.addNote)
+    Button mAddNote;
+    @Bind(R.id.calendarButton)
+    Button mCalendarButton;
 
     private FreeDayLib mFreeDayLib;
     private FreeDay mCurrentFreeDay;
@@ -72,18 +80,18 @@ public class FreeDaysActivity extends AppCompatActivity {
         mCalendarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    Calendar cal = Calendar.getInstance();
-                    Intent intent = new Intent(Intent.ACTION_EDIT);
-                    intent.setType("vnd.android.cursor.item/event");
-                    intent.putExtra("beginTime", cal.getTimeInMillis());
-                    intent.putExtra("allDay", true);
-                    intent.putExtra("rrule", "FREQ=YEARLY");
-                    intent.putExtra("endTime", cal.getTimeInMillis()+60*60*1000);
-                    intent.putExtra("title", "A Test Event from android app");
-                    startActivity(intent);
+                Calendar cal = Calendar.getInstance();
+                Intent intent = new Intent(Intent.ACTION_EDIT);
+                intent.setType("vnd.android.cursor.item/event");
+                intent.putExtra("beginTime", cal.getTimeInMillis());
+                intent.putExtra("allDay", true);
+                intent.putExtra("rrule", "FREQ=YEARLY");
+                intent.putExtra("endTime", cal.getTimeInMillis() + 60 * 60 * 1000);
+                intent.putExtra("title", "A Test Event from android app");
+                startActivity(intent);
             }
         });
-        }
+    }
 
     private void setLayoutConTent() {
         imageLabel.setImageResource(mCurrentFreeDay.getImage());
@@ -91,20 +99,21 @@ public class FreeDaysActivity extends AppCompatActivity {
         mDateLabel.setText(mCurrentFreeDay.getDate());
 
         mDescriptionLabel.setText(mCurrentFreeDay.getDescription());
-        mWebsiteLabel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(mCurrentFreeDay.getWebsite()));
-                if (mCurrentFreeDay.getWebsite() == "") {
-                    mWebsiteLabel.setText("Cool!");
-                    mWebsiteLabel.setClickable(false);
-                    mWebsiteLabel.setTextColor(Color.parseColor("#404040"));
-                } else {
-                    mWebsiteLabel.setText("Click here for more info");
-                    mWebsiteLabel.setTextColor(Color.BLUE);
+        if (mCurrentFreeDay.getWebsite() == "") {
+            mWebsiteLabel.setClickable(false);
+            mWebsiteLabel.setText("Cool!");
+            mWebsiteLabel.setTextColor(Color.parseColor("#404040"));
+        } else {
+            mWebsiteLabel.setText("Click here for more info");
+            mWebsiteLabel.setTextColor(Color.BLUE);
+            mWebsiteLabel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(mCurrentFreeDay.getWebsite()));
+                    startActivity(intent);
                 }
-                startActivity(intent);
-            }
-        });
+            });
+        }
     }
 }
+
