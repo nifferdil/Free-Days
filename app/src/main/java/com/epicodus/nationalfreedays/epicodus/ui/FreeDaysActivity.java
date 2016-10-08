@@ -59,15 +59,15 @@ public class FreeDaysActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        if (mCurrentFreeDay.getWebsite() != "") {
-            mWebsiteLabel.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(mCurrentFreeDay.getWebsite()));
-                    startActivity(intent);
-                }
-            });
-            }
+//        if (mCurrentFreeDay.getWebsite() != "") {
+//            mWebsiteLabel.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(mCurrentFreeDay.getWebsite()));
+//                    startActivity(intent);
+//                }
+//            });
+//            }
 
         mCalendarButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,13 +89,22 @@ public class FreeDaysActivity extends AppCompatActivity {
         imageLabel.setImageResource(mCurrentFreeDay.getImage());
         mNameLabel.setText(mCurrentFreeDay.getTitle());
         mDateLabel.setText(mCurrentFreeDay.getDate());
-        if (mCurrentFreeDay.getWebsite() == "") {
-            mWebsiteLabel.setText("Cool!");
-            mWebsiteLabel.setTextColor(Color.parseColor("#404040"));
-        } else {
-            mWebsiteLabel.setText("Click here for more info");
-            mWebsiteLabel.setTextColor(Color.BLUE);
-        }
+
         mDescriptionLabel.setText(mCurrentFreeDay.getDescription());
+        mWebsiteLabel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(mCurrentFreeDay.getWebsite()));
+                if (mCurrentFreeDay.getWebsite() == "") {
+                    mWebsiteLabel.setText("Cool!");
+                    mWebsiteLabel.setClickable(false);
+                    mWebsiteLabel.setTextColor(Color.parseColor("#404040"));
+                } else {
+                    mWebsiteLabel.setText("Click here for more info");
+                    mWebsiteLabel.setTextColor(Color.BLUE);
+                }
+                startActivity(intent);
+            }
+        });
     }
 }
