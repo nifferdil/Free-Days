@@ -13,16 +13,18 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".epicodus.ui.MainActivity"
+            android:screenOrientation="portrait"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name=".epicodus.ui.FreeDaysActivity"
             android:label="@string/title_activity_free_days"
+            android:screenOrientation="portrait"
             android:parentActivityName=".epicodus.ui.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -84,10 +86,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.nationalfreedays.epicodus.ui.MainActivity"/>
         </activity>
+        <!-- Splash screen -->
         <activity
             android:name=".epicodus.ui.SplashActivity"
-            android:label="@string/title_activity_splash"
-            android:theme="@style/AppTheme">
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

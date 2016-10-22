@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:layout_margin="20dp"
-              android:gravity="center"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@mipmap/ic_launcher"
               android:orientation="vertical"
-              tools:context="com.epicodus.nationalfreedays.epicodus.ui.SplashActivity">
+              android:layout_gravity="center">
 
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/imageView"
-        android:src="@mipmap/ic_launcher"
-        android:layout_gravity="center_horizontal"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Free Days"
-        android:textSize="35dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/textViewTitle"
-        android:layout_gravity="center_horizontal"/>
 </LinearLayout>
