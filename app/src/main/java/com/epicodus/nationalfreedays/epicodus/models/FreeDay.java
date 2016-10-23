@@ -7,6 +7,31 @@ public class FreeDay {
     private int Image;
     private String mTitle;
     private String mDate;
+    private int mMonth;
+    private int mDay;
+
+    public void setDate(String date) {
+        mDate = date;
+    }
+
+    public int getMonth() {
+        return mMonth;
+    }
+
+    public void setMonth(int month) {
+        mMonth = month;
+    }
+
+    public int getDay() {
+        return mDay;
+    }
+
+    public void setDay(int day) {
+        mDay = day;
+    }
+
+    private int mMonthDay;
+
     private String mDescription;
     private String mWebsite;
 
@@ -51,11 +76,21 @@ public class FreeDay {
         this.mWebsite = mWebsite;
     }
 
-    public FreeDay(int image, String title, String date, String description, String website) {
+    public int getMonthDay() {
+        return mMonthDay;
+    }
+
+    public void setMonthDay(int monthDay) {
+        mMonthDay = monthDay;
+    }
+
+    public FreeDay(int image, String title, String date, int month, int day, String description, String website) {
 
         Image = image;
         mTitle = title;
         mDate = date;
+        mMonth = month;
+        mDay = day;
         mDescription = description;
         mWebsite = website;
     }

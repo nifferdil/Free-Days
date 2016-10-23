@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,8 @@ import com.epicodus.nationalfreedays.epicodus.models.FreeDay;
 import com.epicodus.nationalfreedays.epicodus.models.FreeDayLib;
 
 import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -80,14 +83,36 @@ public class FreeDaysActivity extends AppCompatActivity {
         mCalendarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Calendar cal = Calendar.getInstance();
+
+                Calendar cal = new GregorianCalendar();
+
+                //int year = cal.get(Calendar.YEAR);
+
+
+                int year = cal.get(Calendar.YEAR) + 1;
+                int month = mCurrentFreeDay.getMonth();
+                int day = mCurrentFreeDay.getDay();
+                cal.setTime(new Date());
+                cal.set(year, month, day);
+
                 Intent intent = new Intent(Intent.ACTION_EDIT);
-                intent.setType("vnd.android.cursor.item/event");
-                intent.putExtra("beginTime", cal.getTimeInMillis());
+                intent.setData(CalendarContract.Events.CONTENT_URI);
+                intent.putExtra(
+                        CalendarContract.EXTRA_EVENT_BEGIN_TIME,
+                        cal.getTime().getTime());
+//                Calendar cal = Calendar.getInstance();
+//                Intent intent = new Intent(Intent.ACTION_EDIT);
+//                intent.setType("vnd.android.cursor.item/event");
+//
+//                Calendar tmpCal = new GregorianCalendar();
+//                    tmpCal.set(Calendar.MONTH, 11);
+//                    tmpCal.set(Calendar.DAY_OF_MONTH, 1);
+//
+//                intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, tmpCal);
                 intent.putExtra("allDay", true);
                 intent.putExtra("rrule", "FREQ=YEARLY");
                 intent.putExtra("endTime", cal.getTimeInMillis() + 60 * 60 * 1000);
-                intent.putExtra("title", "A Test Event from android app");
+                intent.putExtra("title", mCurrentFreeDay.getTitle());
                 startActivity(intent);
             }
         });
