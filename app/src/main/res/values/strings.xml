@@ -11,4 +11,6 @@
     <string name="title_activity_new_free_day_display">NewFreeDayDisplayActivity</string>
     <string name="title_activity_added_free_day_display">AddedFreeDayDisplayActivity</string>
     <string name="title_activity_splash">SplashActivity</string>
+    <string name="about">About</string>
+    <string name="free_days">Free Days</string>
 </resources>

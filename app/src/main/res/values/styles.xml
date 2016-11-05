@@ -9,6 +9,29 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
+    <!--Nav Drawer Items-->
 
+    <style name="NavDrawerItem">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">56dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:onClick">onDrawerClick</item>
+    </style>
+
+    <style name="NavDrawerIcon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="NavDrawerText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:paddingRight">35dp</item>
+    </style>
 
 </resources>

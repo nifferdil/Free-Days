@@ -63,7 +63,7 @@
                 android:layout_margin="10dp"
                 android:gravity="center"
                 android:text="Website"
-                android:textSize="20sp"/>
+                android:textSize="16sp"/>
 
             <Button
                 android:id="@+id/nextButton"
@@ -75,26 +75,33 @@
                 android:text="Next Free Day"
                 android:textSize="22sp"/>
 
-            <Button
-                android:id="@+id/addNote"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
-                android:layout_marginBottom="20sp"
-                android:background="#fff385"
-                android:text="Add Notes"/>
+            <!--<Button-->
+                <!--android:id="@+id/addNote"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:layout_marginBottom="20sp"-->
+                <!--android:background="#fff385"-->
+                <!--android:text="Add Notes"/>-->
 
-            <Button
+            <ImageView
                 android:id="@+id/calendarButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/nextButton"
-                android:layout_marginBottom="41dp"
-                android:background="#ffac1a"
-                android:text="Save the Date"
-                android:textSize="22sp"/>
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_calendar"
+                android:layout_gravity="right"
+                />
+
+            <!--<Button-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_above="@+id/nextButton"-->
+                <!--android:layout_marginBottom="41dp"-->
+                <!--android:background="#ffac1a"-->
+                <!--android:text="Save the Date"-->
+                <!--android:textSize="22sp"/>-->
 
         </LinearLayout>
 

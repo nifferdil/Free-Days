@@ -3,6 +3,9 @@ package com.epicodus.nationalfreedays.epicodus.ui;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +17,10 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    private Fragment currentFragment;
+    private DrawerLayout drawer;
+
     @Bind(R.id.daysButton)Button mDaysButton;
     @Bind(R.id.addFreeDayButton)Button mAddFreeDayButton;
     private SharedPreferences mPreferences;
@@ -24,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
 //        Parse.enableLocalDatastore(this);
 //
@@ -40,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, FreeDaysActivity.class);
-                    startActivity(intent);
+                startActivity(intent);
             }
         });
 
@@ -51,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
+
 
 //    private boolean isRegistered() {
 //        String username = mPreferences.getString("username", null);
@@ -73,6 +83,27 @@ public class MainActivity extends AppCompatActivity {
 //        }
 //        Toast.makeText(this, "Welcome " + mUser.getName(), Toast.LENGTH_LONG).show();
 //    }
+
+
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+//        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(
+//                this, drawer, toolbar, R.string.action_settings, R.string.action_settings);
+//        drawer.addDrawerListener(drawerToggle);
+//        drawerToggle.syncState();
+
+    }
+
+    public void onDrawerClick(View view) {
+        switch (view.getId()) {
+            case R.id.drawer_item_about:
+//                Intent intent = new Intent(ProductActivity.this, MainActivity.class);
+//                startActivity(intent);
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+
+        }
+    }
 
 
 }

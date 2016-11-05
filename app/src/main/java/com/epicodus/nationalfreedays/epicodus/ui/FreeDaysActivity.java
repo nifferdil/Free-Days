@@ -36,10 +36,10 @@ public class FreeDaysActivity extends AppCompatActivity {
     TextView mWebsiteLabel;
     @Bind(R.id.nextButton)
     Button mNextButton;
-    @Bind(R.id.addNote)
-    Button mAddNote;
+//    @Bind(R.id.addNote)
+//    Button mAddNote;
     @Bind(R.id.calendarButton)
-    Button mCalendarButton;
+    ImageView mCalendarButton;
 
     private FreeDayLib mFreeDayLib;
     private FreeDay mCurrentFreeDay;
@@ -63,13 +63,13 @@ public class FreeDaysActivity extends AppCompatActivity {
             }
         });
 
-        mAddNote.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(FreeDaysActivity.this, NoteActivity.class);
-                startActivity(intent);
-            }
-        });
+//        mAddNote.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(FreeDaysActivity.this, NoteActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 //        if (mCurrentFreeDay.getWebsite() != "") {
 //            mWebsiteLabel.setOnClickListener(new View.OnClickListener() {
 //                @Override
@@ -86,29 +86,34 @@ public class FreeDaysActivity extends AppCompatActivity {
 
                 Calendar cal = new GregorianCalendar();
 
-                //int year = cal.get(Calendar.YEAR);
+                int currentDayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
+                int currentMonth = cal.get(Calendar.MONTH);
 
+                int freeDayMonth = mCurrentFreeDay.getMonth();
+                int freeDayDay = mCurrentFreeDay.getDay();
 
-                int year = cal.get(Calendar.YEAR) + 1;
-                int month = mCurrentFreeDay.getMonth();
-                int day = mCurrentFreeDay.getDay();
+                int year;
+                if (currentMonth > freeDayMonth) {
+                    year = cal.get(Calendar.YEAR) + 1;
+                } else year = cal.get(Calendar.YEAR);
+
+                if (currentMonth == freeDayMonth) {
+                    if (currentDayOfMonth > freeDayDay) {
+                        year = cal.get(Calendar.YEAR) + 1;
+                    } else year = cal.get(Calendar.YEAR);
+                }
+
                 cal.setTime(new Date());
-                cal.set(year, month, day);
+
+                cal.set(year, freeDayMonth, freeDayDay);
 
                 Intent intent = new Intent(Intent.ACTION_EDIT);
                 intent.setData(CalendarContract.Events.CONTENT_URI);
                 intent.putExtra(
                         CalendarContract.EXTRA_EVENT_BEGIN_TIME,
                         cal.getTime().getTime());
-//                Calendar cal = Calendar.getInstance();
-//                Intent intent = new Intent(Intent.ACTION_EDIT);
-//                intent.setType("vnd.android.cursor.item/event");
-//
-//                Calendar tmpCal = new GregorianCalendar();
-//                    tmpCal.set(Calendar.MONTH, 11);
-//                    tmpCal.set(Calendar.DAY_OF_MONTH, 1);
-//
-//                intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, tmpCal);
+
+                intent.setType("vnd.android.cursor.item/event");
                 intent.putExtra("allDay", true);
                 intent.putExtra("rrule", "FREQ=YEARLY");
                 intent.putExtra("endTime", cal.getTimeInMillis() + 60 * 60 * 1000);
@@ -126,10 +131,10 @@ public class FreeDaysActivity extends AppCompatActivity {
         mDescriptionLabel.setText(mCurrentFreeDay.getDescription());
         if (mCurrentFreeDay.getWebsite() == "") {
             mWebsiteLabel.setClickable(false);
-            mWebsiteLabel.setText("Cool!");
+            mWebsiteLabel.setText("");
             mWebsiteLabel.setTextColor(Color.parseColor("#404040"));
         } else {
-            mWebsiteLabel.setText("Click here for more info");
+            mWebsiteLabel.setText("More info about " + mCurrentFreeDay.getTitle());
             mWebsiteLabel.setTextColor(Color.BLUE);
             mWebsiteLabel.setOnClickListener(new View.OnClickListener() {
                 @Override
