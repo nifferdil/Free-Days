@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Fragment currentFragment;
     private DrawerLayout drawer;
+    private Toolbar toolbar;
 
     @Bind(R.id.daysButton)Button mDaysButton;
     @Bind(R.id.addFreeDayButton)Button mAddFreeDayButton;
@@ -32,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
 
 //        Parse.enableLocalDatastore(this);
 //
@@ -87,10 +91,16 @@ public class MainActivity extends AppCompatActivity {
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
-//        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(
-//                this, drawer, toolbar, R.string.action_settings, R.string.action_settings);
-//        drawer.addDrawerListener(drawerToggle);
-//        drawerToggle.syncState();
+        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.action_settings, R.string.action_settings);
+        drawer.addDrawerListener(drawerToggle);
+        drawerToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+        drawerToggle.setDrawerIndicatorEnabled(true);
+        //drawerToggle.setDrawerListener(drawerToggle);
 
     }
 

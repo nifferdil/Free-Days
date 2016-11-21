@@ -55,6 +55,8 @@ public class FreeDaysActivity extends AppCompatActivity {
 
         setLayoutConTent();
 
+        setTitle(R.string.free_day);
+
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
