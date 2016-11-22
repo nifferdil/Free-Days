@@ -3,7 +3,6 @@ package com.epicodus.nationalfreedays.epicodus.ui;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -19,13 +18,12 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    private Fragment currentFragment;
     private DrawerLayout drawer;
-    private Toolbar toolbar;
 
-    @Bind(R.id.daysButton)Button mDaysButton;
-    @Bind(R.id.addFreeDayButton)Button mAddFreeDayButton;
+    @Bind(R.id.daysButton)
+    Button mDaysButton;
+    //@Bind(R.id.addFreeDayButton)
+    Button mAddFreeDayButton;
     private SharedPreferences mPreferences;
     //private User mUser;
 
@@ -58,13 +56,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mAddFreeDayButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, NewFreeDayActivity.class);
-                startActivity(intent);
-            }
-        });
+//        mAddFreeDayButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, NewFreeDayActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
 //    private boolean isRegistered() {
@@ -94,14 +92,10 @@ public class MainActivity extends AppCompatActivity {
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.action_settings, R.string.action_settings);
         drawer.addDrawerListener(drawerToggle);
-        drawerToggle.syncState();
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-
         drawerToggle.setDrawerIndicatorEnabled(true);
-        //drawerToggle.setDrawerListener(drawerToggle);
-
+        drawerToggle.syncState();
     }
 
     public void onDrawerClick(View view) {
