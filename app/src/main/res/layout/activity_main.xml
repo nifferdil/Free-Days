@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView2"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="70dp"
                 android:background="#ffac1a"
                 android:text="Get Started!"
                 android:textSize="20dp"/>
@@ -35,8 +35,9 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:layout_marginTop="70dp"
-                android:text="@string/freebies"
+                android:text="@string/never_miss"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/dark_grey"
                 android:textSize="36sp"
@@ -49,7 +50,7 @@
                 android:layout_below="@+id/textView"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="49dp"
-                android:text="Pick up awesome freebies ranging from cookies to popcorn to coffee..."
+                android:text="@string/freebies"
                 android:textColor="#404040"
                 android:textSize="22sp"/>
 
@@ -101,12 +102,14 @@
                     <LinearLayout
                         android:id="@+id/drawer_item_about"
                         style="@style/NavDrawerItem"
-                        android:layout_alignParentTop="true">
+                        android:layout_alignParentTop="true"
+                        android:onClick="onDrawerClick">
 
                         <TextView
                             android:id="@+id/drawer_text_about"
                             style="@style/NavDrawerText"
-                            android:text="@string/about"/>
+                            android:text="@string/about"
+                            />
 
                     </LinearLayout>
 
@@ -125,7 +128,20 @@
                             android:text="@string/free_days"/>
                     </LinearLayout>
 
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/layout_version"-->
+                        <!--style="@style/NavDrawerItem"-->
+                        <!--&gt;-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/version"-->
+                            <!--style="@style/NavDrawerText"-->
+                            <!--android:text="@string/version"-->
+                            <!--/>-->
+                    <!--</LinearLayout>-->
+
                 </RelativeLayout>
+
             </ScrollView>
 
         </RelativeLayout>

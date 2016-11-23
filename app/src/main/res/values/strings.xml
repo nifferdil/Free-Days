@@ -13,5 +13,12 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="about">About</string>
     <string name="free_days">Free Days</string>
-    <string name="freebies">Take Advantage of Year-Round Freebies!</string>
+    <string name="freebies">Take advantage of year-round freebies...</string>
+    <string name="never_miss">Never Miss Out on Free Stuff Again!</string>
+    <string name="icons">Icons made by Freepik from www.flaticon.com </string>
+    <string name="about_free_days">About Free Days</string>
+    <string name="ok">OK</string>
+    <string name="app_description">Free Days lets you explore a collection of Free Days that take place throughout the year. Add the day to your calendar to be reminded to get your free stuff. Find out about a new Free Day? Email freedaysapp@gmail.com</string>
+    <string name="version">Version 1.0.0</string>
+
 </resources>
