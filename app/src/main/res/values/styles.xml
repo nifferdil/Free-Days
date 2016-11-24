@@ -45,14 +45,17 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingTop">56dp</item>
-        <item name="android:orientation">horizontal</item>
-        <item name="android:layout_marginLeft">16dp</item>
         <item name="android:onClick">onDrawerClick</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center|center_vertical</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+
     </style>
 
     <style name="NavDrawerIcon">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
     </style>
@@ -61,8 +64,25 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">24dp</item>
+    </style>
+
+    <style name="MenuTextView">
+        <item name="android:layout_marginTop">8dp</item>
         <item name="android:textSize">20dp</item>
-        <item name="android:paddingRight">35dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="MenuLinearLayoutButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:onClick">onDrawerClick</item>
     </style>
 
 </resources>

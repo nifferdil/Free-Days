@@ -80,69 +80,82 @@
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
-        android:layout_width="200dp"
+        android:layout_width="185dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:backgroundTint="@color/white"
+        android:background="@color/white"
         android:fitsSystemWindows="true">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" >
 
-            <ScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="10dp">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="27dp"
+                              android:orientation="vertical"
+                    />
 
-                    <LinearLayout
-                        android:id="@+id/drawer_item_about"
-                        style="@style/NavDrawerItem"
-                        android:layout_alignParentTop="true"
-                        android:onClick="onDrawerClick">
+                <!-- About-->
+                <LinearLayout
+                    android:id="@+id/drawer_item_about"
+                    style="@style/MenuLinearLayoutButton">
 
-                        <TextView
-                            android:id="@+id/drawer_text_about"
-                            style="@style/NavDrawerText"
-                            android:text="@string/about"
-                            />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_help_black_24dp1"/>
 
-                    </LinearLayout>
+                    <TextView
+                        style="@style/MenuTextView"
+                        android:text="@string/about"/>
 
-                    <LinearLayout
-                        android:id="@+id/drawer_item_dashboard"
-                        style="@style/NavDrawerItem"
-                        android:layout_below="@+id/drawer_item_about">
+                </LinearLayout>
 
-                        <ImageView
-                            style="@style/NavDrawerIcon"
-                            android:src="@mipmap/ic_launcher"/>
+                <!-- Attribution-->
+                <LinearLayout
+                    android:id="@+id/drawer_item_attribution"
+                    style="@style/MenuLinearLayoutButton">
 
-                        <TextView
-                            android:id="@+id/drawer_text_dashboard"
-                            style="@style/NavDrawerText"
-                            android:text="@string/free_days"/>
-                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_info_black_24dp"/>
 
-                    <!--<LinearLayout-->
-                        <!--android:id="@+id/layout_version"-->
-                        <!--style="@style/NavDrawerItem"-->
-                        <!--&gt;-->
+                    <TextView
+                        style="@style/MenuTextView"
+                        android:text="@string/attribution"/>
 
-                        <!--<TextView-->
-                            <!--android:id="@+id/version"-->
-                            <!--style="@style/NavDrawerText"-->
-                            <!--android:text="@string/version"-->
-                            <!--/>-->
-                    <!--</LinearLayout>-->
+                </LinearLayout>
 
-                </RelativeLayout>
+            </LinearLayout>
 
-            </ScrollView>
+            <!-- Version-->
+            <LinearLayout
+                android:id="@+id/linearlayout_go_to_dashboard"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <TextView
+                    style="@style/MenuTextView"
+                    android:text="@string/version"/>
+
+            </LinearLayout>
 
         </RelativeLayout>
 
