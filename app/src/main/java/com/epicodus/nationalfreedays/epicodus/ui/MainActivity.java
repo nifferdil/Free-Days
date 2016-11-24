@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 
@@ -108,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
                 builder.setTitle(R.string.about_free_days);
-                builder.setMessage(R.string.app_description);
+                builder.setMessage(Html.fromHtml("<p>Sample text, <a href=\"http://google.nl\">hyperlink</a>.</p>") + getString(R.string.app_description));
 
                 builder.setNegativeButton(R.string.ok,
                                 new DialogInterface.OnClickListener() {

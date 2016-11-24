@@ -35,8 +35,8 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginTop="70dp"
+                android:gravity="center"
                 android:text="@string/never_miss"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/dark_grey"
@@ -87,21 +87,37 @@
         android:fitsSystemWindows="true">
 
         <RelativeLayout
-            android:layout_height="match_parent"
-            android:layout_width="match_parent" >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <LinearLayout android:layout_width="match_parent"
-                              android:layout_height="27dp"
-                              android:orientation="vertical"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:orientation="vertical"
+                    />
+
+                <TextView android:layout_width="match_parent"
+                          android:id="@+id/textview_app"
+                          android:layout_height="54dp"
+                          android:paddingLeft="8dp"
+                          android:paddingRight="8dp"
+                          android:gravity="center"
+                          android:text="@string/free_days"
+                          android:textColor="@android:color/white"
+                          android:background="@color/colorPrimaryDark"
+                          android:textSize="20dp"
+                          android:clickable="true"
                     />
 
                 <!-- About-->
                 <LinearLayout
+                    android:layout_marginTop="20dp"
                     android:id="@+id/drawer_item_about"
                     style="@style/MenuLinearLayoutButton">
 
@@ -137,13 +153,13 @@
             <!-- Version-->
             <LinearLayout
                 android:id="@+id/linearlayout_go_to_dashboard"
-                android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
+                android:layout_alignParentBottom="true"
                 android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
                 >
 
                 <ImageView
@@ -153,7 +169,8 @@
 
                 <TextView
                     style="@style/MenuTextView"
-                    android:text="@string/version"/>
+                    android:text="@string/version"
+                    android:textSize="15dp"/>
 
             </LinearLayout>
 
