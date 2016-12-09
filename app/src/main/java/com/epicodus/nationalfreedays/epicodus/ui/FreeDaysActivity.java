@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.epicodus.nationalfreedays.R;
@@ -35,9 +35,9 @@ public class FreeDaysActivity extends AppCompatActivity {
     @Bind(R.id.websiteLabel)
     TextView mWebsiteLabel;
     @Bind(R.id.nextButton)
-    Button mNextButton;
+    RelativeLayout mNextButton;
     @Bind(R.id.button_previous)
-    Button mPreviousButton;
+    RelativeLayout mPreviousButton;
 //    @Bind(R.id.addNote)
 //    Button mAddNote;
     @Bind(R.id.calendarButton)
