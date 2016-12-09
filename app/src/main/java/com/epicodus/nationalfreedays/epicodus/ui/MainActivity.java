@@ -114,8 +114,20 @@ public class MainActivity extends AppCompatActivity {
 
                 final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
+                final SpannableString s = new SpannableString("       Questions or feedback?" + "freedaysapp@gmail.com");
+
+                //add TextViews
+                final TextView tx1 = new TextView(this);
+                tx1.setText(s);
+                tx1.setLinkTextColor(Color.BLUE);
+                tx1.setAutoLinkMask(RESULT_OK);
+                tx1.setMovementMethod(LinkMovementMethod.getInstance());
+
+                Linkify.addLinks(s, Linkify.EMAIL_ADDRESSES);
+
                 builder.setTitle(R.string.about_free_days);
-                builder.setMessage(getString(R.string.app_description));
+                builder.setMessage(Html.fromHtml(getString(R.string.app_description)));
+                builder.setView(tx1);
 
                 builder.setNegativeButton(R.string.ok,
                         new DialogInterface.OnClickListener() {
@@ -127,41 +139,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Dialog dialog;
                 dialog = builder.create();
+
                 dialog.show();
-
-
-                final SpannableString stMyWeb = new SpannableString("hello " + "http://android-er.blogspot.com/");
-
-                Linkify.addLinks(stMyWeb, Linkify.WEB_URLS);
-
-                final SpannableString s = new SpannableString("   Please send any questions to" + "email@fake.com");
-
-
-//add TextViews
-                final TextView tx1 = new TextView(this);
-                tx1.setText(s);
-                tx1.setLinkTextColor(Color.BLUE);
-                tx1.setAutoLinkMask(RESULT_OK);
-                tx1.setMovementMethod(LinkMovementMethod.getInstance());
-
-
-                Linkify.addLinks(s, Linkify.EMAIL_ADDRESSES);
-
-                final AlertDialog builderEmail = new AlertDialog.Builder(this)
-                        .setMessage(stMyWeb)
-                        .setView(tx1)
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                            }})
-                        .create();
-
-                builderEmail.show();
-
-                ((TextView)builderEmail.findViewById(android.R.id.message))
-                        .setMovementMethod(LinkMovementMethod.getInstance());
-
 
                 drawer.closeDrawer(GravityCompat.START);
                 break;

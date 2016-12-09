@@ -115,6 +115,15 @@ public class FreeDaysActivity extends AppCompatActivity {
                     } else year = cal.get(Calendar.YEAR);
                 }
 
+                if (freeDayDay == 0) {
+                    if (freeDayMonth == 5) {
+                        cal.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
+                        cal.set(Calendar.DAY_OF_WEEK_IN_MONTH, 1);
+                    } else if (freeDayMonth == 6) {
+                        cal.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
+                        cal.set(Calendar.DAY_OF_WEEK_IN_MONTH, 1);                    }
+                }
+
                 cal.setTime(new Date());
 
                 cal.set(year, freeDayMonth, freeDayDay);

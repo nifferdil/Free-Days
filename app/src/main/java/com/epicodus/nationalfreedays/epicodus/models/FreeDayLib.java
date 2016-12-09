@@ -66,22 +66,26 @@ public class FreeDayLib {
                 ""
         ));
 
-//        mFreeDays.add(new FreeDay(
-//                R.drawable.ic_comic,
-//                "Free Comic Day",
-//                "First Saturday in May",
-//                "Participating comic book stores across North America give away free comic books.",
-//                "http://www.freecomicbookday.com/"
-//        ));
-//
-//        mFreeDays.add(new FreeDay(
-//                R.drawable.ic_doughnut,
-//                "National Donut Day",
-//                "First Friday in June",
-//                "Get a free donut at Krispy Kreme, LaMar's Donuts, and Shipley Do-Nuts.",
-//                ""
-//        ));
-//
+        mFreeDays.add(new FreeDay(
+                R.drawable.ic_comic,
+                "Free Comic Day",
+                "First Saturday in May",
+                Calendar.MAY,
+                0,
+                "Participating comic book stores across North America give away free comic books.",
+                "http://www.freecomicbookday.com/"
+        ));
+
+        mFreeDays.add(new FreeDay(
+                R.drawable.ic_doughnut,
+                "National Donut Day",
+                "First Friday in June",
+                Calendar.JUNE,
+                0,
+                "Get a free donut at Krispy Kreme, LaMar's Donuts, and Shipley Do-Nuts.",
+                ""
+        ));
+
         mFreeDays.add(new FreeDay(
                 R.drawable.ic_tea,
                 "National Iced Tea Day",
