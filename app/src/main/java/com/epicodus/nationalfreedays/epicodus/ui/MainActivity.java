@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,8 +13,11 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.epicodus.nationalfreedays.R;
 
@@ -109,15 +113,15 @@ public class MainActivity extends AppCompatActivity {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
                 builder.setTitle(R.string.about_free_days);
-                builder.setMessage(Html.fromHtml("<p>Sample text, <a href=\"http://google.nl\">hyperlink</a>.</p>") + getString(R.string.app_description));
+                builder.setMessage(getString(R.string.app_description));
 
                 builder.setNegativeButton(R.string.ok,
-                                new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int item) {
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int item) {
 
-                                    }
-                                });
+                            }
+                        });
 
                 Dialog dialog;
                 dialog = builder.create();
@@ -126,9 +130,46 @@ public class MainActivity extends AppCompatActivity {
 
                 drawer.closeDrawer(GravityCompat.START);
                 break;
+            case R.id.drawer_item_attribution:
 
+                showDialog();
+                break;
         }
     }
 
+        public void showDialog() {
+            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Attribution");
+
+            LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
+            View layout = inflater.inflate(R.layout.credits, null);
+
+            final TextView text = (TextView) layout.findViewById(R.id.text);
+            text.setMovementMethod(LinkMovementMethod.getInstance());
+            text.setLinkTextColor(Color.BLUE);
+            builder.setMessage("Icons made by:");
+            text.setText(Html.fromHtml("<a href=http://www.freepik.com> Freepik</a><br> <a href=http://www.flaticon.com/authors/madebyoliver>  Madebyoliver</a><br> <a href=http://www.flaticon.com> www.flaticon.com</a><br><a href=https://creativecommons.org/licenses/by/4.0/> Google Material Design Icons</a><br>"));
+            builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int i) {
+
+                }
+            });
+            AlertDialog dialog = builder.create();
+
+            Button b = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
+            if(b != null)
+                b.setTextColor(Color.BLACK);
+
+            dialog.setView(layout);
+            dialog.show();
+        }
+
+//        public static Spanned fromHtml(String source) {
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+//                return Html.fromHtml(source, Html.FROM);
+//            } else {
+//                return Html.fromHtml(source);
+//            }
+//        }
 
 }
