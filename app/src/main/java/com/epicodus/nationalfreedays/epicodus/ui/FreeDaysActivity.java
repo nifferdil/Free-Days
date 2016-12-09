@@ -36,6 +36,8 @@ public class FreeDaysActivity extends AppCompatActivity {
     TextView mWebsiteLabel;
     @Bind(R.id.nextButton)
     Button mNextButton;
+    @Bind(R.id.button_previous)
+    Button mPreviousButton;
 //    @Bind(R.id.addNote)
 //    Button mAddNote;
     @Bind(R.id.calendarButton)
@@ -61,6 +63,14 @@ public class FreeDaysActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mCurrentFreeDay = mFreeDayLib.nextFreeDay(mCurrentFreeDay);
+                setLayoutConTent();
+            }
+        });
+
+        mPreviousButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCurrentFreeDay = mFreeDayLib.previousFreeDay(mCurrentFreeDay);
                 setLayoutConTent();
             }
         });

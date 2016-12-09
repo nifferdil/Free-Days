@@ -141,4 +141,13 @@ public class FreeDayLib {
             return mFreeDays.get(index + 1);
         }
     }
+
+    public FreeDay previousFreeDay(FreeDay mCurrentFreeDay) {
+        int index = mFreeDays.indexOf(mCurrentFreeDay);
+        if (index == mFreeDays.size() - mFreeDays.size()) {
+            return mFreeDays.get(mFreeDays.size() - 1);
+        } else {
+            return mFreeDays.get(index - 1);
+        }
+    }
 }

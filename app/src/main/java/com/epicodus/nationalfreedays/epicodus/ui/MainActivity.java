@@ -13,7 +13,9 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
+import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -126,6 +128,39 @@ public class MainActivity extends AppCompatActivity {
                 Dialog dialog;
                 dialog = builder.create();
                 dialog.show();
+
+
+                final SpannableString stMyWeb = new SpannableString("hello " + "http://android-er.blogspot.com/");
+
+                Linkify.addLinks(stMyWeb, Linkify.WEB_URLS);
+
+                final SpannableString s = new SpannableString("   Please send any questions to" + "email@fake.com");
+
+
+//add TextViews
+                final TextView tx1 = new TextView(this);
+                tx1.setText(s);
+                tx1.setLinkTextColor(Color.BLUE);
+                tx1.setAutoLinkMask(RESULT_OK);
+                tx1.setMovementMethod(LinkMovementMethod.getInstance());
+
+
+                Linkify.addLinks(s, Linkify.EMAIL_ADDRESSES);
+
+                final AlertDialog builderEmail = new AlertDialog.Builder(this)
+                        .setMessage(stMyWeb)
+                        .setView(tx1)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                            }})
+                        .create();
+
+                builderEmail.show();
+
+                ((TextView)builderEmail.findViewById(android.R.id.message))
+                        .setMovementMethod(LinkMovementMethod.getInstance());
 
 
                 drawer.closeDrawer(GravityCompat.START);
