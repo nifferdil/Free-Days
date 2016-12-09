@@ -41,7 +41,7 @@ public class FreeDayLib {
                 "March 8",
                 Calendar.MARCH,
                 8,
-                "IHOP offers a free short stack of buttermilk pancakes, limited to dine,-in guests visiting between 7am and 10pm, while supplies last.",
+                "IHOP offers a free short stack of buttermilk pancakes, limited to dine-in guests visiting between 7am and 10pm, while supplies last.",
                 "http://www.ihoppancakeday.com/"
         ));
 
