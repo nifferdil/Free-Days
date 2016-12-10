@@ -115,18 +115,19 @@ public class FreeDaysActivity extends AppCompatActivity {
                     } else year = cal.get(Calendar.YEAR);
                 }
 
-                if (freeDayDay == 0) {
-                    if (freeDayMonth == 5) {
-                        cal.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-                        cal.set(Calendar.DAY_OF_WEEK_IN_MONTH, 1);
-                    } else if (freeDayMonth == 6) {
-                        cal.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
-                        cal.set(Calendar.DAY_OF_WEEK_IN_MONTH, 1);                    }
-                }
-
                 cal.setTime(new Date());
 
+
+
+
                 cal.set(year, freeDayMonth, freeDayDay);
+
+//                if (freeDayMonth == 4) {
+//                    cal.set(Calendar.WEEK_OF_MONTH, 1);
+//                } else if (freeDayMonth == 5) {
+//                    cal.set(Calendar.WEEK_OF_MONTH, 1);
+//
+//                }
 
                 Intent intent = new Intent(Intent.ACTION_EDIT);
                 intent.setData(CalendarContract.Events.CONTENT_URI);

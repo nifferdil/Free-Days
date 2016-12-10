@@ -71,7 +71,7 @@ public class FreeDayLib {
                 "Free Comic Day",
                 "First Saturday in May",
                 Calendar.MAY,
-                0,
+                Calendar.SATURDAY,
                 "Participating comic book stores across North America give away free comic books.",
                 "http://www.freecomicbookday.com/"
         ));
@@ -81,7 +81,7 @@ public class FreeDayLib {
                 "National Donut Day",
                 "First Friday in June",
                 Calendar.JUNE,
-                0,
+                Calendar.FRIDAY,
                 "Get a free donut at Krispy Kreme, LaMar's Donuts, and Shipley Do-Nuts.",
                 ""
         ));
