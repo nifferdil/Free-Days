@@ -114,7 +114,8 @@ public class MainActivity extends AppCompatActivity {
 
                 final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-                final SpannableString s = new SpannableString("       Questions or feedback?" + "freedaysapp@gmail.com");
+                //final SpannableString s = new SpannableString("       Questions or feedback?" + "freedaysapp@gmail.com");
+                final SpannableString s = new SpannableString("       " + getString(R.string.app_about));
 
                 //add TextViews
                 final TextView tx1 = new TextView(this);

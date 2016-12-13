@@ -19,9 +19,12 @@
     <string name="about_free_days">About Free Days</string>
     <string name="ok">OK</string>
     <string name="app_description">
-        <![CDATA[Free Days lets you explore a collection of Free Days that take place throughout the year.<br><br> Add the day to your calendar to be reminded to get your free stuff.<br>]]>
+        <![CDATA[Free Days lets you explore a collection of Free Days that take place throughout the year.<br><br> Add the day to your calendar to be reminded to get your free stuff.<br><br>Questions or feedback? Email:]]>
         </string>
     <string name="version">Version 1.0.0</string>
     <string name="attribution">Credits</string>
+    <string name="app_about"><![CDATA[freedaysapp@gmail.com]]>
+    </string>
+
 
 </resources>
