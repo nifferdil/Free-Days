@@ -117,17 +117,16 @@ public class FreeDaysActivity extends AppCompatActivity {
 
                 cal.setTime(new Date());
 
-
-
-
                 cal.set(year, freeDayMonth, freeDayDay);
 
-//                if (freeDayMonth == 4) {
-//                    cal.set(Calendar.WEEK_OF_MONTH, 1);
-//                } else if (freeDayMonth == 5) {
-//                    cal.set(Calendar.WEEK_OF_MONTH, 1);
-//
-//                }
+                if (mCurrentFreeDay.getTitle().equalsIgnoreCase("Free Comic Day")) {
+                    cal.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
+                    cal.set(Calendar.DAY_OF_WEEK_IN_MONTH, 1);
+                } else if (mCurrentFreeDay.getTitle().equalsIgnoreCase("National Donut Day")) {
+
+                    cal.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
+                    cal.set(Calendar.DAY_OF_WEEK_IN_MONTH, 1);
+                }
 
                 Intent intent = new Intent(Intent.ACTION_EDIT);
                 intent.setData(CalendarContract.Events.CONTENT_URI);
@@ -144,6 +143,8 @@ public class FreeDaysActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     private void setLayoutConTent() {
         imageLabel.setImageResource(mCurrentFreeDay.getImage());
