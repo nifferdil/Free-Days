@@ -81,8 +81,8 @@
 
                     <RelativeLayout
                         android:id="@+id/button_previous"
-                        android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_alignParentLeft="true"
@@ -99,10 +99,18 @@
 
                     </RelativeLayout>
 
+                    <ImageView
+                        android:id="@+id/calendarButton"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_calendar"
+                        android:layout_centerInParent="true"
+                        />
+
                     <RelativeLayout
                         android:id="@+id/nextButton"
-                        android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_alignParentRight="true"
@@ -135,13 +143,7 @@
                 <!--android:background="#fff385"-->
                 <!--android:text="Add Notes"/>-->
 
-            <ImageView
-                android:id="@+id/calendarButton"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/ic_calendar"
-                android:layout_gravity="center"
-                />
+
 
             <!--<Button-->
                 <!--android:layout_width="match_parent"-->
