@@ -25,6 +25,8 @@
     <string name="attribution">Credits</string>
     <string name="app_about"><![CDATA[freedaysapp@gmail.com]]>
     </string>
-
+    <!-- AdMob ad unit IDs -->
+    <string name="banner_home_footer">ca-app-pub-9751202674393575/5086281249</string>
+    <string name="interstitial_full_screen">ca-app-pub-9751202674393575/9212952848</string>
 
 </resources>

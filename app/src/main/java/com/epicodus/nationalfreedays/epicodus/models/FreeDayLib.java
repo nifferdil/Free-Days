@@ -36,7 +36,7 @@ public class FreeDayLib {
         ));
 
         mFreeDays.add(new FreeDay(
-                R.drawable.ic_coffee_maker,
+                R.drawable.donut,
                 "National Bagel Day",
                 "February 9",
                 Calendar.FEBRUARY,
@@ -97,7 +97,7 @@ public class FreeDayLib {
         ));
 
         mFreeDays.add(new FreeDay(
-                R.drawable.ic_tea,
+                R.drawable.ice_tea,
                 "National Iced Tea Day",
                 "June 10",
                 Calendar.JUNE,
@@ -107,7 +107,7 @@ public class FreeDayLib {
         ));
 
         mFreeDays.add(new FreeDay(
-                R.drawable.ic_coffee_maker,
+                R.drawable.slurpee,
                 "7-Eleven Day",
                 "July 11",
                 Calendar.JULY,
@@ -117,7 +117,17 @@ public class FreeDayLib {
         ));
 
         mFreeDays.add(new FreeDay(
-                R.drawable.ic_coffee_maker,
+                R.drawable.chicken,
+                "National Chicken Wing Day",
+                "July 29",
+                Calendar.JULY,
+                29,
+                "Free or discounted wings at Buffalo Wild Wings, Wingstop, Wing Zone, and Wild Wing Cafe and others.",
+                "http://www.nationalchickenwingday.com/"
+        ));
+
+        mFreeDays.add(new FreeDay(
+                R.drawable.rootbeer,
                 "National Rootbeer Float Day",
                 "August 6",
                 Calendar.AUGUST,
@@ -127,7 +137,7 @@ public class FreeDayLib {
         ));
 
         mFreeDays.add(new FreeDay(
-                R.drawable.ic_tea,
+                R.drawable.cheeseburger,
                 "National Cheeseburger Day",
                 "September 18",
                 Calendar.SEPTEMBER,
@@ -147,7 +157,7 @@ public class FreeDayLib {
         ));
 
         mFreeDays.add(new FreeDay(
-                R.drawable.ic_coffee_maker,
+                R.drawable.taco,
                 "National Taco Day",
                 "October 4",
                 Calendar.OCTOBER,

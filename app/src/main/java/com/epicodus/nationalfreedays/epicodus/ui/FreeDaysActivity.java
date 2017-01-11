@@ -14,6 +14,9 @@ import android.widget.TextView;
 import com.epicodus.nationalfreedays.R;
 import com.epicodus.nationalfreedays.epicodus.models.FreeDay;
 import com.epicodus.nationalfreedays.epicodus.models.FreeDayLib;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -45,6 +48,7 @@ public class FreeDaysActivity extends AppCompatActivity {
 
     private FreeDayLib mFreeDayLib;
     private FreeDay mCurrentFreeDay;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +56,15 @@ public class FreeDaysActivity extends AppCompatActivity {
         setContentView(R.layout.activity_free_days);
         ButterKnife.bind(this);
 
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-9751202674393575~3609548047");
+
         mFreeDayLib = new FreeDayLib();
         mCurrentFreeDay = mFreeDayLib.getFreeDays().get(0);
+
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+        mAdView.loadAd(adRequest);
 
         setLayoutConTent();
 
@@ -167,6 +178,30 @@ public class FreeDaysActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    @Override
+    public void onPause() {
+        if (mAdView != null) {
+            mAdView.pause();
+        }
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
+        super.onDestroy();
     }
 }
 
