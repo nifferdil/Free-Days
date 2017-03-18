@@ -32,7 +32,7 @@ public class FreeDay {
 
     private int mMonthDay;
 
-    private String mDescription;
+    private int mDescription;
     private String mWebsite;
 
     public int getImage() {
@@ -59,11 +59,11 @@ public class FreeDay {
         this.mDate = mDate;
     }
 
-    public String getDescription() {
+    public int getDescription() {
         return mDescription;
     }
 
-    public void setDescription(String mDescription) {
+    public void setDescription(int mDescription) {
         this.mDescription = mDescription;
     }
 
@@ -84,7 +84,7 @@ public class FreeDay {
         mMonthDay = monthDay;
     }
 
-    public FreeDay(int image, String title, String date, int month, int day, String description, String website) {
+    public FreeDay(int image, String title, String date, int month, int day, int description, String website) {
 
         Image = image;
         mTitle = title;

@@ -31,17 +31,17 @@ public class FreeDayLib {
                 "January 19",
                 Calendar.JANUARY,
                 19,
-                "Select movie theaters across the country offer a bag of free popcorn.",
+                R.string.popcorn_desc,
                 "http://www.popcorn.org/Facts-Fun/National-Popcorn-Day/"
         ));
 
         mFreeDays.add(new FreeDay(
-                R.drawable.donut,
+                R.drawable.bagel,
                 "National Bagel Day",
                 "February 9",
                 Calendar.FEBRUARY,
                 9,
-                "Einstein Bros. and Noah's Bagels offer a free bagel and schmear with any purchase. Panera Bread gives away a free bagel with coffee purchase.",
+                R.string.bagel_desc,
                 "http://www.nationalbagelday.com/"
         ));
 
@@ -51,7 +51,7 @@ public class FreeDayLib {
                 "March 7",
                 Calendar.MARCH,
                 7,
-                "IHOP offers a free short stack of buttermilk pancakes, limited to dine-in guests visiting between 7am and 10pm, while supplies last.",
+                R.string.pancake_desc,
                 "http://www.ihoppancakeday.com/"
         ));
 
@@ -61,7 +61,7 @@ public class FreeDayLib {
                 "April 14",
                 Calendar.APRIL,
                 14,
-                "Starting at noon, customers at participating Ben & Jerry's locations are welcomed to choose their flavor of ice cream, on the house.",
+                R.string.ice_cream_desc,
                 "http://www.benjerry.com/scoop-shops/free-cone-day/"
 
         ));
@@ -72,7 +72,7 @@ public class FreeDayLib {
                 "April 26",
                 Calendar.APRIL,
                 26,
-                "Free pretzels at Philly Pretzel Factory, Pretzelmaker, and Snyder's of Hanover.",
+                R.string.pretzel_desc,
                 "https://www.punchbowl.com/holidays/national-pretzel-day/"
         ));
 
@@ -82,7 +82,7 @@ public class FreeDayLib {
                 "First Saturday in May",
                 Calendar.MAY,
                 0,
-                "Participating comic book stores across North America give away free comic books.",
+                R.string.comic_desc,
                 "http://www.freecomicbookday.com/"
         ));
 
@@ -92,17 +92,17 @@ public class FreeDayLib {
                 "First Friday in June",
                 Calendar.JUNE,
                 0,
-                "Get a free donut at Krispy Kreme, LaMar's Donuts, and Shipley Do-Nuts.",
+                R.string.doughnut_desc,
                 "http://www.krispykreme.com/nationaldoughnutday/"
         ));
 
         mFreeDays.add(new FreeDay(
-                R.drawable.ice_tea,
+                R.drawable.icetea,
                 "National Iced Tea Day",
                 "June 10",
                 Calendar.JUNE,
                 10,
-                "7-Eleven gives away a free Snapple tea and Teavana gives you a free tea with purchase.",
+                R.string.ice_tea_desc,
                 "http://www.nationalicedteaday.com/"
         ));
 
@@ -112,7 +112,7 @@ public class FreeDayLib {
                 "July 11",
                 Calendar.JULY,
                 11,
-                "Celebrate 7/11 with a free small Slurpee and sometimes other items from 11am to 7pm.",
+                R.string.slurpee_desc,
                 "http://fiftee.slurpee.com/post/146738790096/celebrate-711-with-a-free-small-slurpee-from-11am/"
         ));
 
@@ -122,7 +122,7 @@ public class FreeDayLib {
                 "July 29",
                 Calendar.JULY,
                 29,
-                "Free or discounted wings at Buffalo Wild Wings, Wingstop, Wing Zone, and Wild Wing Cafe and others.",
+                R.string.chicken_wing_desc,
                 "http://www.nationalchickenwingday.com/"
         ));
 
@@ -132,7 +132,7 @@ public class FreeDayLib {
                 "August 6",
                 Calendar.AUGUST,
                 6,
-                "Stop in to any A&W Restaurant location from 2pm-close and enjoy a Float on them.",
+                R.string.root_beer_desc,
                 "http://awrestaurants.com/rootbeerfloatday/"
         ));
 
@@ -142,7 +142,7 @@ public class FreeDayLib {
                 "September 18",
                 Calendar.SEPTEMBER,
                 18,
-                "Free, discounted and specialty burgers at select locations including Ruby Tuesday, Black Angus, Johnny Rockets and many more.",
+                R.string.cheeseburger_desc,
                 "http://www.offers.com/blog/post/national-cheeseburger-day/"
         ));
 
@@ -152,17 +152,17 @@ public class FreeDayLib {
                 "September 29",
                 Calendar.SEPTEMBER,
                 29,
-                "Select retailers offer a free small coffee: Dunkin' Donuts, Krispy Kreme, Lamar's Donuts, and McDonald's. Other retailers who offer BOGO are Eintstein's Bros Bagels, Noah's Bagels, and Peet's Coffee.",
+                R.string.coffee_desc,
                 "https://www.punchbowl.com/holidays/national-coffee-day/"
         ));
 
         mFreeDays.add(new FreeDay(
-                R.drawable.taco,
+                R.drawable.ic_taco,
                 "National Taco Day",
                 "October 4",
                 Calendar.OCTOBER,
                 4,
-                "Freebies and deals across the country at TacoTime, El Pollo Loco, Del Taco and other select locations.",
+                R.string.taco_desc,
                 "http://www.offers.com/blog/post/national-taco-day/"
         ));
 
@@ -172,7 +172,7 @@ public class FreeDayLib {
                 "November 3",
                 Calendar.NOVEMBER,
                 3,
-                "Look for promotions from chains such as Subway and Jersey Mike's.",
+                R.string.sandwich_desc,
                 "https://www.punchbowl.com/holidays/national-sandwich-day/"
         ));
 
@@ -182,7 +182,7 @@ public class FreeDayLib {
                 "December 4",
                 Calendar.DECEMBER,
                 4,
-                "Check out stores like Great American Cookies and Quiznos to get your free cookie!",
+                R.string.cookie_desc,
                 "https://www.punchbowl.com/holidays/national-cookie-day/"
         ));
 
@@ -192,7 +192,7 @@ public class FreeDayLib {
                 "December 8",
                 Calendar.DECEMBER,
                 8,
-                "Free brownie at participating Nestle Toll House Cafe locations.",
+                R.string.brownie_desc,
                 "https://foodimentary.com/2016/12/08/december-8th-is-national-brownie-day-2/"
         ));
     }

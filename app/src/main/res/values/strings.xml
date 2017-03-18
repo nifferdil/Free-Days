@@ -29,4 +29,24 @@
     <string name="banner_home_footer">ca-app-pub-9751202674393575/5086281249</string>
     <string name="interstitial_full_screen">ca-app-pub-9751202674393575/9212952848</string>
 
+    <!-- Free Day descriptions -->
+
+    <string name="popcorn_desc">Select movie theaters across the country offer a bag of free popcorn.</string>
+    <string name="bagel_desc">Einstein Bros. and Noah\'s Bagels offer a free bagel and schmear with any purchase. Panera Bread gives away a free bagel with coffee purchase.</string>
+    <string name="pancake_desc">IHOP offers a free short stack of buttermilk pancakes, limited to dine-in guests visiting between 7am and 10pm, while supplies last.</string>
+    <string name="ice_cream_desc"><![CDATA[Starting at noon, customers at participating Ben & Jerry\'s locations are welcomed to choose their flavor of ice cream, on the house.]]></string>
+    <string name="pretzel_desc">Free pretzels at Philly Pretzel Factory, Pretzelmaker, and Snyder\'s of Hanover.</string>
+    <string name="comic_desc">Participating comic book stores across North America give away free comic books.</string>
+    <string name="doughnut_desc">Get a free donut at Krispy Kreme, LaMar\'s Donuts, and Shipley Do-Nuts.</string>
+    <string name="ice_tea_desc">7-Eleven gives away a free Snapple tea and Teavana gives you a free tea with purchase.</string>
+    <string name="slurpee_desc">Celebrate 7/11 with a free small Slurpee and sometimes other items from 11am to 7pm.</string>
+    <string name="chicken_wing_desc">Free or discounted wings at Buffalo Wild Wings, Wingstop, Wing Zone, and Wild Wing Cafe and others.</string>
+    <string name="root_beer_desc"><![CDATA[Stop in to any A&W Restaurant location from 2pm-close and enjoy a Float on them.]]></string>
+    <string name="cheeseburger_desc">Free, discounted and specialty burgers at select locations including Ruby Tuesday, Black Angus, Johnny Rockets and many more.</string>
+    <string name="coffee_desc">Select retailers offer a free small coffee: Dunkin\' Donuts, Krispy Kreme, Lamar\'s Donuts, and McDonald\'s. Other retailers who offer BOGO are Eintstein\'s Bros Bagels, Noah\'s Bagels, and Peet\'s Coffee.</string>
+    <string name="taco_desc">Freebies and deals across the country at TacoTime, El Pollo Loco, Del Taco and other select locations.</string>
+    <string name="sandwich_desc">Look for promotions from chains such as Subway and Jersey Mike\'s.</string>
+    <string name="cookie_desc">Check out stores like Great American Cookies and Quiznos to get your free cookie!</string>
+    <string name="brownie_desc">Free brownie at participating Nestle Toll House Cafe locations.</string>
+
 </resources>
