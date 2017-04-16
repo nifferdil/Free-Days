@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onDrawerClick(View view) {
         switch (view.getId()) {
+
             case R.id.drawer_item_about:
 
                 final AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -149,12 +150,18 @@ public class MainActivity extends AppCompatActivity {
 
                 showDialog();
                 break;
+
+            case R.id.drawer_item_list:
+
+                Intent intent = new Intent(MainActivity.this, ListFreeDaysActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 
         public void showDialog() {
             final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Attribution");
+            builder.setTitle(getString(R.string.dialog_title));
 
             LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
             View layout = inflater.inflate(R.layout.credits, null);
@@ -162,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
             final TextView text = (TextView) layout.findViewById(R.id.text);
             text.setMovementMethod(LinkMovementMethod.getInstance());
             text.setLinkTextColor(Color.BLUE);
-            builder.setMessage("Icons made by:");
+            builder.setMessage(getString(R.string.dialog_message));
             text.setText(Html.fromHtml("<a href=http://www.freepik.com> Freepik</a><br> <a href=http://www.flaticon.com/authors/madebyoliver>  Madebyoliver</a><br> <a href=http://www.flaticon.com> www.flaticon.com</a><br><a href=https://creativecommons.org/licenses/by/4.0/> Google Material Design Icons</a><br>"));
             builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int i) {

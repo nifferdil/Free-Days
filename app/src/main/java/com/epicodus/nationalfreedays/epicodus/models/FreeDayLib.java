@@ -11,7 +11,7 @@ import java.util.Calendar;
 
 public class FreeDayLib {
 
-    private ArrayList<FreeDay> mFreeDays;
+    public ArrayList<FreeDay> mFreeDays;
 
     public FreeDayLib() {
         setFreeDays();
@@ -215,9 +215,5 @@ public class FreeDayLib {
         }
     }
 
-    public int getFirstFriday(int freeDayDay) {
 
-        freeDayDay = Calendar.FRIDAY;
-        return freeDayDay;
-    }
 }

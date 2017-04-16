@@ -148,11 +148,28 @@
 
                 </LinearLayout>
 
+                <!-- List-->
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/drawer_item_list"
+                    style="@style/MenuLinearLayoutButton">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_help_black_24dp1"/>
+
+                    <TextView
+                        style="@style/MenuTextView"
+                        android:text="@string/free_days_list"/>
+
+                </LinearLayout>
+
             </LinearLayout>
 
             <!-- Version-->
             <LinearLayout
-                android:id="@+id/linearlayout_go_to_dashboard"
+                android:id="@+id/drawer_item_version"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"

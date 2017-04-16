@@ -49,4 +49,8 @@
     <string name="cookie_desc">Check out stores like Great American Cookies and Quiznos to get your free cookie!</string>
     <string name="brownie_desc">Free brownie at participating Nestle Toll House Cafe locations.</string>
 
+    <string name="dialog_title">Attribution</string>
+    <string name="dialog_message">Icons made by:</string>
+    <string name="free_days_list">Free Days List</string>
+
 </resources>

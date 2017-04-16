@@ -10,6 +10,9 @@ public class FreeDay {
     private int mMonth;
     private int mDay;
 
+
+
+
     public void setDate(String date) {
         mDate = date;
     }
@@ -93,5 +96,6 @@ public class FreeDay {
         mDay = day;
         mDescription = description;
         mWebsite = website;
+
     }
 }
